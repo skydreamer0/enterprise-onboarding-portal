@@ -189,21 +189,21 @@ function App() {
               <div className="card">
                 <h3>📝 行政與費用類表單</h3>
                 <ul style={{ listStyle: 'none', padding: 0, margin: '1rem 0 0 0' }}>
-                  <li style={{ padding: '0.8rem', background: 'rgba(255,255,255,0.05)', borderRadius: '4px', marginBottom: '0.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span>付款憑單</span>
-                    <a href="https://github.com/skydreamer0/enterprise-onboarding-portal/raw/main/03_行政作業/01_行政範本與月結報支/[範本]_PMS_付款憑證.xlsx" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.4rem 0.8rem', fontSize: '0.8rem', textDecoration: 'none' }}>下載</a>
+                  <li style={{ padding: '1rem', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '8px', marginBottom: '0.8rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', transition: 'all 0.2s' }}>
+                    <span style={{ fontWeight: 500, color: 'var(--text-primary)' }}>付款憑單</span>
+                    <a href="https://github.com/skydreamer0/enterprise-onboarding-portal/raw/main/03_行政作業/01_行政範本與月結報支/[範本]_PMS_付款憑證.xlsx" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.4rem 1rem', fontSize: '0.85rem', textDecoration: 'none', background: 'rgba(99, 102, 241, 0.15)', color: 'var(--accent-primary)', border: '1px solid rgba(99, 102, 241, 0.3)' }}>下載</a>
                   </li>
-                  <li style={{ padding: '0.8rem', background: 'rgba(255,255,255,0.05)', borderRadius: '4px', marginBottom: '0.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span>報核表</span>
-                    <a href="https://github.com/skydreamer0/enterprise-onboarding-portal/raw/main/03_行政作業/01_行政範本與月結報支/[範本]_報核表.doc" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.4rem 0.8rem', fontSize: '0.8rem', textDecoration: 'none' }}>下載</a>
+                  <li style={{ padding: '1rem', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '8px', marginBottom: '0.8rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', transition: 'all 0.2s' }}>
+                    <span style={{ fontWeight: 500, color: 'var(--text-primary)' }}>報核表</span>
+                    <a href="https://github.com/skydreamer0/enterprise-onboarding-portal/raw/main/03_行政作業/01_行政範本與月結報支/[範本]_報核表.doc" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.4rem 1rem', fontSize: '0.85rem', textDecoration: 'none', background: 'rgba(99, 102, 241, 0.15)', color: 'var(--accent-primary)', border: '1px solid rgba(99, 102, 241, 0.3)' }}>下載</a>
                   </li>
-                  <li style={{ padding: '0.8rem', background: 'rgba(255,255,255,0.05)', borderRadius: '4px', marginBottom: '0.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span>折讓單</span>
-                    <a href="https://github.com/skydreamer0/enterprise-onboarding-portal/raw/main/03_行政作業/01_行政範本與月結報支/[範本]_折讓單.xls" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.4rem 0.8rem', fontSize: '0.8rem', textDecoration: 'none' }}>下載</a>
+                  <li style={{ padding: '1rem', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '8px', marginBottom: '0.8rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', transition: 'all 0.2s' }}>
+                    <span style={{ fontWeight: 500, color: 'var(--text-primary)' }}>折讓單</span>
+                    <a href="https://github.com/skydreamer0/enterprise-onboarding-portal/raw/main/03_行政作業/01_行政範本與月結報支/[範本]_折讓單.xls" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.4rem 1rem', fontSize: '0.85rem', textDecoration: 'none', background: 'rgba(99, 102, 241, 0.15)', color: 'var(--accent-primary)', border: '1px solid rgba(99, 102, 241, 0.3)' }}>下載</a>
                   </li>
-                  <li style={{ padding: '0.8rem', background: 'rgba(255,255,255,0.05)', borderRadius: '4px', marginBottom: '0.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span>演講/主持費收據簽收單</span>
-                    <a href="https://github.com/skydreamer0/enterprise-onboarding-portal/raw/main/03_行政作業/01_行政範本與月結報支/[範本]_演講費收據_模板.docx" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.4rem 0.8rem', fontSize: '0.8rem', textDecoration: 'none' }}>下載</a>
+                  <li style={{ padding: '1rem', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '8px', marginBottom: '0.8rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', transition: 'all 0.2s' }}>
+                    <span style={{ fontWeight: 500, color: 'var(--text-primary)' }}>演講/主持費收據簽收單</span>
+                    <a href="https://github.com/skydreamer0/enterprise-onboarding-portal/raw/main/03_行政作業/01_行政範本與月結報支/[範本]_演講費收據_模板.docx" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.4rem 1rem', fontSize: '0.85rem', textDecoration: 'none', background: 'rgba(99, 102, 241, 0.15)', color: 'var(--accent-primary)', border: '1px solid rgba(99, 102, 241, 0.3)' }}>下載</a>
                   </li>
                 </ul>
               </div>
@@ -211,21 +211,21 @@ function App() {
               <div className="card">
                 <h3>📦 業務與出貨類表單</h3>
                 <ul style={{ listStyle: 'none', padding: 0, margin: '1rem 0 0 0' }}>
-                  <li style={{ padding: '0.8rem', background: 'rgba(255,255,255,0.05)', borderRadius: '4px', marginBottom: '0.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span>報價單</span>
-                    <a href="https://github.com/skydreamer0/enterprise-onboarding-portal/raw/main/03_行政作業/03_報價單範例/報價單-耕莘台北%2020260401健保調降(EDB-SMN)-20250422.xls" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.4rem 0.8rem', fontSize: '0.8rem', textDecoration: 'none' }}>下載</a>
+                  <li style={{ padding: '1rem', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '8px', marginBottom: '0.8rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', transition: 'all 0.2s' }}>
+                    <span style={{ fontWeight: 500, color: 'var(--text-primary)' }}>報價單</span>
+                    <a href="https://github.com/skydreamer0/enterprise-onboarding-portal/raw/main/03_行政作業/03_報價單範例/報價單-耕莘台北%2020260401健保調降(EDB-SMN)-20250422.xls" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.4rem 1rem', fontSize: '0.85rem', textDecoration: 'none', background: 'rgba(99, 102, 241, 0.15)', color: 'var(--accent-primary)', border: '1px solid rgba(99, 102, 241, 0.3)' }}>下載</a>
                   </li>
-                  <li style={{ padding: '0.8rem', background: 'rgba(255,255,255,0.05)', borderRadius: '4px', marginBottom: '0.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span>特惠價格卡</span>
-                    <a href="https://github.com/skydreamer0/enterprise-onboarding-portal/tree/main/03_行政作業" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.4rem 0.8rem', fontSize: '0.8rem', textDecoration: 'none' }}>前往資料夾</a>
+                  <li style={{ padding: '1rem', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '8px', marginBottom: '0.8rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', transition: 'all 0.2s' }}>
+                    <span style={{ fontWeight: 500, color: 'var(--text-primary)' }}>特惠價格卡</span>
+                    <a href="https://github.com/skydreamer0/enterprise-onboarding-portal/tree/main/03_行政作業" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.4rem 1rem', fontSize: '0.85rem', textDecoration: 'none', background: 'rgba(99, 102, 241, 0.15)', color: 'var(--accent-primary)', border: '1px solid rgba(99, 102, 241, 0.3)' }}>前往資料夾</a>
                   </li>
-                  <li style={{ padding: '0.8rem', background: 'rgba(255,255,255,0.05)', borderRadius: '4px', marginBottom: '0.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span>用印申請單</span>
-                    <a href="https://github.com/skydreamer0/enterprise-onboarding-portal/raw/main/03_行政作業/04_用印申請作業/用印申請單__耕莘台北健保調降報價單_0422_George.doc" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.4rem 0.8rem', fontSize: '0.8rem', textDecoration: 'none' }}>下載</a>
+                  <li style={{ padding: '1rem', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '8px', marginBottom: '0.8rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', transition: 'all 0.2s' }}>
+                    <span style={{ fontWeight: 500, color: 'var(--text-primary)' }}>用印申請單</span>
+                    <a href="https://github.com/skydreamer0/enterprise-onboarding-portal/raw/main/03_行政作業/04_用印申請作業/用印申請單__耕莘台北健保調降報價單_0422_George.doc" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.4rem 1rem', fontSize: '0.85rem', textDecoration: 'none', background: 'rgba(99, 102, 241, 0.15)', color: 'var(--accent-primary)', border: '1px solid rgba(99, 102, 241, 0.3)' }}>下載</a>
                   </li>
-                  <li style={{ padding: '0.8rem', background: 'rgba(255,255,255,0.05)', borderRadius: '4px', marginBottom: '0.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span>退換貨處理單</span>
-                    <a href="https://github.com/skydreamer0/enterprise-onboarding-portal/tree/main/03_行政作業" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.4rem 0.8rem', fontSize: '0.8rem', textDecoration: 'none' }}>前往資料夾</a>
+                  <li style={{ padding: '1rem', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '8px', marginBottom: '0.8rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', transition: 'all 0.2s' }}>
+                    <span style={{ fontWeight: 500, color: 'var(--text-primary)' }}>退換貨處理單</span>
+                    <a href="https://github.com/skydreamer0/enterprise-onboarding-portal/tree/main/03_行政作業" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.4rem 1rem', fontSize: '0.85rem', textDecoration: 'none', background: 'rgba(99, 102, 241, 0.15)', color: 'var(--accent-primary)', border: '1px solid rgba(99, 102, 241, 0.3)' }}>前往資料夾</a>
                   </li>
                 </ul>
               </div>
@@ -233,21 +233,21 @@ function App() {
               <div className="card">
                 <h3>📝 日常作業類表單</h3>
                 <ul style={{ listStyle: 'none', padding: 0, margin: '1rem 0 0 0' }}>
-                  <li style={{ padding: '0.8rem', background: 'rgba(255,255,255,0.05)', borderRadius: '4px', marginBottom: '0.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span>週行程規劃範本</span>
-                    <a href="https://github.com/skydreamer0/enterprise-onboarding-portal/raw/main/01_週期性報表與行程/01_週行程規劃_範本.xlsx" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.4rem 0.8rem', fontSize: '0.8rem', textDecoration: 'none' }}>下載</a>
+                  <li style={{ padding: '1rem', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '8px', marginBottom: '0.8rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', transition: 'all 0.2s' }}>
+                    <span style={{ fontWeight: 500, color: 'var(--text-primary)' }}>週行程規劃範本</span>
+                    <a href="https://github.com/skydreamer0/enterprise-onboarding-portal/raw/main/01_週期性報表與行程/01_週行程規劃_範本.xlsx" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.4rem 1rem', fontSize: '0.85rem', textDecoration: 'none', background: 'rgba(99, 102, 241, 0.15)', color: 'var(--accent-primary)', border: '1px solid rgba(99, 102, 241, 0.3)' }}>下載</a>
                   </li>
-                  <li style={{ padding: '0.8rem', background: 'rgba(255,255,255,0.05)', borderRadius: '4px', marginBottom: '0.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span>Pre-Call Plan 模板</span>
-                    <a href="https://github.com/skydreamer0/enterprise-onboarding-portal/tree/main/01_週期性報表與行程" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.4rem 0.8rem', fontSize: '0.8rem', textDecoration: 'none' }}>前往資料夾</a>
+                  <li style={{ padding: '1rem', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '8px', marginBottom: '0.8rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', transition: 'all 0.2s' }}>
+                    <span style={{ fontWeight: 500, color: 'var(--text-primary)' }}>Pre-Call Plan 模板</span>
+                    <a href="https://github.com/skydreamer0/enterprise-onboarding-portal/tree/main/01_週期性報表與行程" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.4rem 1rem', fontSize: '0.85rem', textDecoration: 'none', background: 'rgba(99, 102, 241, 0.15)', color: 'var(--accent-primary)', border: '1px solid rgba(99, 102, 241, 0.3)' }}>前往資料夾</a>
                   </li>
-                  <li style={{ padding: '0.8rem', background: 'rgba(255,255,255,0.05)', borderRadius: '4px', marginBottom: '0.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span>EXPENSE 費用申報表</span>
-                    <a href="https://github.com/skydreamer0/enterprise-onboarding-portal/raw/main/03_行政作業/01_行政範本與月結報支/[範本]_expense_月結表.xlsx" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.4rem 0.8rem', fontSize: '0.8rem', textDecoration: 'none' }}>下載</a>
+                  <li style={{ padding: '1rem', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '8px', marginBottom: '0.8rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', transition: 'all 0.2s' }}>
+                    <span style={{ fontWeight: 500, color: 'var(--text-primary)' }}>EXPENSE 費用申報表</span>
+                    <a href="https://github.com/skydreamer0/enterprise-onboarding-portal/raw/main/03_行政作業/01_行政範本與月結報支/[範本]_expense_月結表.xlsx" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.4rem 1rem', fontSize: '0.85rem', textDecoration: 'none', background: 'rgba(99, 102, 241, 0.15)', color: 'var(--accent-primary)', border: '1px solid rgba(99, 102, 241, 0.3)' }}>下載</a>
                   </li>
-                  <li style={{ padding: '0.8rem', background: 'rgba(255,255,255,0.05)', borderRadius: '4px', marginBottom: '0.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span>MOR 月會報告模板</span>
-                    <a href="https://github.com/skydreamer0/enterprise-onboarding-portal/raw/main/01_週期性報表與行程/03_MOR月度營運會議報告_示範結構.pptx" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.4rem 0.8rem', fontSize: '0.8rem', textDecoration: 'none' }}>下載</a>
+                  <li style={{ padding: '1rem', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '8px', marginBottom: '0.8rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', transition: 'all 0.2s' }}>
+                    <span style={{ fontWeight: 500, color: 'var(--text-primary)' }}>MOR 月會報告模板</span>
+                    <a href="https://github.com/skydreamer0/enterprise-onboarding-portal/raw/main/01_週期性報表與行程/03_MOR月度營運會議報告_示範結構.pptx" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.4rem 1rem', fontSize: '0.85rem', textDecoration: 'none', background: 'rgba(99, 102, 241, 0.15)', color: 'var(--accent-primary)', border: '1px solid rgba(99, 102, 241, 0.3)' }}>下載</a>
                   </li>
                 </ul>
               </div>
@@ -261,32 +261,40 @@ function App() {
             <h1>行銷審會審核流程</h1>
             <p style={{ color: 'var(--text-secondary)' }}>適用於行銷相關專案與費用的申請。</p>
             
-            <div className="card" style={{ marginTop: '2rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-              <h3>流程步驟</h3>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                <span className="badge">1</span><div><strong>PSR</strong> 準備資料</div>
-              </div>
-              <div style={{ width: '2px', height: '20px', background: 'var(--border-color)', marginLeft: '14px' }}></div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                <span className="badge">2</span><div>送 <strong>直屬主管</strong> 審核</div>
-              </div>
-              <div style={{ width: '2px', height: '20px', background: 'var(--border-color)', marginLeft: '14px' }}></div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                <span className="badge">3</span><div>送 <strong>PM</strong> 審核</div>
-              </div>
-              <div style={{ width: '2px', height: '20px', background: 'var(--border-color)', marginLeft: '14px' }}></div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                <span className="badge">4</span><div>送 <strong>Jerry / Bernie</strong> 審核</div>
-              </div>
-              <div style={{ width: '2px', height: '20px', background: 'var(--border-color)', marginLeft: '14px' }}></div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                <span className="badge" style={{ backgroundColor: 'var(--accent-success)', color: '#000' }}>5</span><div>送 <strong>Champion</strong> 最終確認</div>
+            <div className="card" style={{ marginTop: '2rem', border: '1px solid rgba(99, 102, 241, 0.2)' }}>
+              <h3 style={{ color: 'var(--accent-primary)', marginBottom: '1rem' }}>📌 流程步驟</h3>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+                <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                  <div style={{ background: 'var(--accent-primary)', color: '#fff', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0 }}>1</div>
+                  <div style={{ marginTop: '2px' }}><strong>PSR</strong> 準備資料</div>
+                </div>
+                <div style={{ width: '2px', height: '12px', background: 'rgba(99, 102, 241, 0.3)', marginLeft: '11px' }}></div>
+                <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                  <div style={{ background: 'var(--accent-primary)', color: '#fff', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0 }}>2</div>
+                  <div style={{ marginTop: '2px' }}>送 <strong>直屬主管</strong> 審核</div>
+                </div>
+                <div style={{ width: '2px', height: '12px', background: 'rgba(99, 102, 241, 0.3)', marginLeft: '11px' }}></div>
+                <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                  <div style={{ background: 'var(--accent-primary)', color: '#fff', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0 }}>3</div>
+                  <div style={{ marginTop: '2px' }}>送 <strong>PM</strong> 審核</div>
+                </div>
+                <div style={{ width: '2px', height: '12px', background: 'rgba(99, 102, 241, 0.3)', marginLeft: '11px' }}></div>
+                <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                  <div style={{ background: 'var(--accent-primary)', color: '#fff', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0 }}>4</div>
+                  <div style={{ marginTop: '2px' }}>送 <strong>Jerry / Bernie</strong> 審核</div>
+                </div>
+                <div style={{ width: '2px', height: '12px', background: 'rgba(99, 102, 241, 0.3)', marginLeft: '11px' }}></div>
+                <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                  <div style={{ background: 'var(--accent-success)', color: '#000', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0 }}>5</div>
+                  <div style={{ marginTop: '2px' }}>送 <strong>Champion</strong> 最終確認</div>
+                </div>
               </div>
             </div>
 
             <div className="grid-cards" style={{ marginTop: '2rem' }}>
-              <div className="card" style={{ borderColor: 'var(--accent-warning)', background: 'rgba(245, 158, 11, 0.05)' }}>
-                <h3>⚠️ 紙本資料處理</h3>
+              <div className="card" style={{ position: 'relative', overflow: 'hidden', border: '1px solid rgba(245, 158, 11, 0.3)' }}>
+                <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'radial-gradient(circle at top right, rgba(245, 158, 11, 0.15), transparent 60%)', pointerEvents: 'none' }}></div>
+                <h3 style={{ color: '#f59e0b', marginBottom: '1rem' }}>⚠️ 紙本資料處理</h3>
                 <ul style={{ color: 'var(--text-secondary)', paddingLeft: '1.2rem', margin: 0 }}>
                   <li style={{ marginBottom: '0.5rem' }}>付款憑單與相關單據掃描後，先提供給主管。</li>
                   <li><strong>正本資料務必交給 Joanne</strong> (行銷部)。</li>
@@ -302,30 +310,37 @@ function App() {
             <h1>營業費審會審核流程</h1>
             <p style={{ color: 'var(--text-secondary)' }}>適用於業務端日常營業費用的申請。</p>
             
-            <div className="card" style={{ marginTop: '2rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-              <h3>流程步驟</h3>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                <span className="badge">1</span><div><strong>PSR</strong> 準備資料</div>
-              </div>
-              <div style={{ width: '2px', height: '20px', background: 'var(--border-color)', marginLeft: '14px' }}></div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                <span className="badge">2</span><div>送 <strong>直屬主管</strong> 審核</div>
-              </div>
-              <div style={{ width: '2px', height: '20px', background: 'var(--border-color)', marginLeft: '14px' }}></div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                <span className="badge" style={{ backgroundColor: 'var(--accent-success)', color: '#000' }}>3</span><div>送 <strong>Champion</strong> 最終確認</div>
+            <div className="card" style={{ marginTop: '2rem', border: '1px solid rgba(99, 102, 241, 0.2)' }}>
+              <h3 style={{ color: 'var(--accent-primary)', marginBottom: '1rem' }}>📌 流程步驟</h3>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+                <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                  <div style={{ background: 'var(--accent-primary)', color: '#fff', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0 }}>1</div>
+                  <div style={{ marginTop: '2px' }}><strong>PSR</strong> 準備資料</div>
+                </div>
+                <div style={{ width: '2px', height: '12px', background: 'rgba(99, 102, 241, 0.3)', marginLeft: '11px' }}></div>
+                <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                  <div style={{ background: 'var(--accent-primary)', color: '#fff', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0 }}>2</div>
+                  <div style={{ marginTop: '2px' }}>送 <strong>直屬主管</strong> 審核</div>
+                </div>
+                <div style={{ width: '2px', height: '12px', background: 'rgba(99, 102, 241, 0.3)', marginLeft: '11px' }}></div>
+                <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                  <div style={{ background: 'var(--accent-success)', color: '#000', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0 }}>3</div>
+                  <div style={{ marginTop: '2px' }}>送 <strong>Champion</strong> 最終確認</div>
+                </div>
               </div>
             </div>
 
             <div className="grid-cards" style={{ marginTop: '2rem' }}>
-              <div className="card" style={{ borderColor: 'var(--accent-danger)', background: 'rgba(239, 68, 68, 0.05)' }}>
-                <h3>🔔 注意事項</h3>
+              <div className="card" style={{ position: 'relative', overflow: 'hidden', border: '1px solid rgba(239, 68, 68, 0.3)' }}>
+                <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'radial-gradient(circle at top right, rgba(239, 68, 68, 0.15), transparent 60%)', pointerEvents: 'none' }}></div>
+                <h3 style={{ color: '#ef4444', marginBottom: '1rem' }}>🔔 注意事項</h3>
                 <ul style={{ color: 'var(--text-secondary)', paddingLeft: '1.2rem', margin: 0 }}>
                   <li>需先向主管確認欲申請的「費審編號」。</li>
                 </ul>
               </div>
-              <div className="card" style={{ borderColor: 'var(--accent-warning)', background: 'rgba(245, 158, 11, 0.05)' }}>
-                <h3>⚠️ 憑單與紙本處理</h3>
+              <div className="card" style={{ position: 'relative', overflow: 'hidden', border: '1px solid rgba(245, 158, 11, 0.3)' }}>
+                <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'radial-gradient(circle at top right, rgba(245, 158, 11, 0.15), transparent 60%)', pointerEvents: 'none' }}></div>
+                <h3 style={{ color: '#f59e0b', marginBottom: '1rem' }}>⚠️ 憑單與紙本處理</h3>
                 <ul style={{ color: 'var(--text-secondary)', paddingLeft: '1.2rem', margin: 0 }}>
                   <li style={{ marginBottom: '0.5rem' }}>付款憑單與單據掃描後，提供給 主管 與 Champion。</li>
                   <li><strong>紙本正本請交給 Anita</strong>。</li>
@@ -342,45 +357,58 @@ function App() {
             <p style={{ color: 'var(--text-secondary)' }}>分為「提出報價需求」與「院方接受價格後」兩個情境。</p>
             
             <div className="grid-cards" style={{ marginTop: '2rem' }}>
-              <div className="card" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                <h3 style={{ color: 'var(--accent-primary)' }}>情境一：提出報價需求</h3>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                  <span className="badge">1</span><div><strong>PSR</strong> 提出需求取得授權</div>
-                </div>
-                <div style={{ width: '2px', height: '10px', background: 'var(--border-color)', marginLeft: '14px' }}></div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                  <span className="badge">2</span><div>填寫 <strong>報價單</strong> & <strong>用印申請單</strong></div>
-                </div>
-                <div style={{ width: '2px', height: '10px', background: 'var(--border-color)', marginLeft: '14px' }}></div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                  <span className="badge">3</span><div>送 <strong>直屬主管</strong> 審核</div>
-                </div>
-                <div style={{ width: '2px', height: '10px', background: 'var(--border-color)', marginLeft: '14px' }}></div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                  <span className="badge">4</span><div>送 <strong>Champion</strong> 審核</div>
-                </div>
-                <div style={{ width: '2px', height: '10px', background: 'var(--border-color)', marginLeft: '14px' }}></div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                  <span className="badge warning">5</span><div>交由 <strong>Anita</strong> 協助用印</div>
+              <div className="card" style={{ border: '1px solid rgba(99, 102, 241, 0.2)' }}>
+                <h3 style={{ color: 'var(--accent-primary)', marginBottom: '1rem' }}>📌 情境一：提出報價需求</h3>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                    <div style={{ background: 'var(--accent-primary)', color: '#fff', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0 }}>1</div>
+                    <div style={{ marginTop: '2px' }}><strong>PSR</strong> 提出需求取得授權</div>
+                  </div>
+                  <div style={{ width: '2px', height: '12px', background: 'rgba(99, 102, 241, 0.3)', marginLeft: '11px' }}></div>
+                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                    <div style={{ background: 'var(--accent-primary)', color: '#fff', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0 }}>2</div>
+                    <div style={{ marginTop: '2px' }}>填寫 <strong>報價單</strong> & <strong>用印申請單</strong></div>
+                  </div>
+                  <div style={{ width: '2px', height: '12px', background: 'rgba(99, 102, 241, 0.3)', marginLeft: '11px' }}></div>
+                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                    <div style={{ background: 'var(--accent-primary)', color: '#fff', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0 }}>3</div>
+                    <div style={{ marginTop: '2px' }}>送 <strong>直屬主管</strong> 審核</div>
+                  </div>
+                  <div style={{ width: '2px', height: '12px', background: 'rgba(99, 102, 241, 0.3)', marginLeft: '11px' }}></div>
+                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                    <div style={{ background: 'var(--accent-primary)', color: '#fff', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0 }}>4</div>
+                    <div style={{ marginTop: '2px' }}>送 <strong>Champion</strong> 審核</div>
+                  </div>
+                  <div style={{ width: '2px', height: '12px', background: 'rgba(99, 102, 241, 0.3)', marginLeft: '11px' }}></div>
+                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                    <div style={{ background: 'var(--accent-warning)', color: '#000', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0 }}>5</div>
+                    <div style={{ marginTop: '2px' }}>交由 <strong>Anita</strong> 協助用印</div>
+                  </div>
                 </div>
               </div>
 
-              <div className="card" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                <h3 style={{ color: 'var(--accent-success)' }}>情境二：院方接受價格後</h3>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                  <span className="badge">1</span><div>需於公司系統 <strong>建立價格</strong></div>
-                </div>
-                <div style={{ width: '2px', height: '10px', background: 'var(--border-color)', marginLeft: '14px' }}></div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                  <span className="badge">2</span><div>填寫 <strong>特惠價格卡</strong></div>
-                </div>
-                <div style={{ width: '2px', height: '10px', background: 'var(--border-color)', marginLeft: '14px' }}></div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                  <span className="badge">3</span><div>送 <strong>直屬主管</strong> 審核</div>
-                </div>
-                <div style={{ width: '2px', height: '10px', background: 'var(--border-color)', marginLeft: '14px' }}></div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                  <span className="badge" style={{ backgroundColor: 'var(--accent-success)', color: '#000' }}>4</span><div>送 <strong>Champion</strong> 審核</div>
+              <div className="card" style={{ border: '1px solid rgba(16, 185, 129, 0.2)' }}>
+                <h3 style={{ color: 'var(--accent-success)', marginBottom: '1rem' }}>✅ 情境二：院方接受價格後</h3>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                    <div style={{ background: 'var(--accent-success)', color: '#000', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0 }}>1</div>
+                    <div style={{ marginTop: '2px' }}>需於公司系統 <strong>建立價格</strong></div>
+                  </div>
+                  <div style={{ width: '2px', height: '12px', background: 'rgba(16, 185, 129, 0.3)', marginLeft: '11px' }}></div>
+                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                    <div style={{ background: 'var(--accent-success)', color: '#000', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0 }}>2</div>
+                    <div style={{ marginTop: '2px' }}>填寫 <strong>特惠價格卡</strong></div>
+                  </div>
+                  <div style={{ width: '2px', height: '12px', background: 'rgba(16, 185, 129, 0.3)', marginLeft: '11px' }}></div>
+                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                    <div style={{ background: 'var(--accent-success)', color: '#000', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0 }}>3</div>
+                    <div style={{ marginTop: '2px' }}>送 <strong>直屬主管</strong> 審核</div>
+                  </div>
+                  <div style={{ width: '2px', height: '12px', background: 'rgba(16, 185, 129, 0.3)', marginLeft: '11px' }}></div>
+                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                    <div style={{ background: 'var(--accent-success)', color: '#000', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0 }}>4</div>
+                    <div style={{ marginTop: '2px' }}>送 <strong>Champion</strong> 審核</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -394,45 +422,58 @@ function App() {
             <p style={{ color: 'var(--text-secondary)' }}>處理折讓單據與報核表審批流程。</p>
             
             <div className="grid-cards" style={{ marginTop: '2rem' }}>
-              <div className="card" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                <h3 style={{ color: 'var(--accent-primary)' }}>折讓單處理</h3>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                  <span className="badge">1</span><div><strong>PSR</strong> 填寫折讓單</div>
-                </div>
-                <div style={{ width: '2px', height: '10px', background: 'var(--border-color)', marginLeft: '14px' }}></div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                  <span className="badge">2</span><div>交由 <strong>醫院採購</strong> 蓋章</div>
-                </div>
-                <div style={{ width: '2px', height: '10px', background: 'var(--border-color)', marginLeft: '14px' }}></div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                  <span className="badge">3</span><div>收回回執聯</div>
-                </div>
-                <div style={{ width: '2px', height: '10px', background: 'var(--border-color)', marginLeft: '14px' }}></div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                  <span className="badge warning">4</span><div>交給 <strong>Anita</strong> 留存</div>
+              <div className="card" style={{ border: '1px solid rgba(99, 102, 241, 0.2)' }}>
+                <h3 style={{ color: 'var(--accent-primary)', marginBottom: '1rem' }}>📌 折讓單處理</h3>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                    <div style={{ background: 'var(--accent-primary)', color: '#fff', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0 }}>1</div>
+                    <div style={{ marginTop: '2px' }}><strong>PSR</strong> 填寫折讓單</div>
+                  </div>
+                  <div style={{ width: '2px', height: '12px', background: 'rgba(99, 102, 241, 0.3)', marginLeft: '11px' }}></div>
+                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                    <div style={{ background: 'var(--accent-primary)', color: '#fff', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0 }}>2</div>
+                    <div style={{ marginTop: '2px' }}>交由 <strong>醫院採購</strong> 蓋章</div>
+                  </div>
+                  <div style={{ width: '2px', height: '12px', background: 'rgba(99, 102, 241, 0.3)', marginLeft: '11px' }}></div>
+                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                    <div style={{ background: 'var(--accent-primary)', color: '#fff', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0 }}>3</div>
+                    <div style={{ marginTop: '2px' }}>收回回執聯</div>
+                  </div>
+                  <div style={{ width: '2px', height: '12px', background: 'rgba(99, 102, 241, 0.3)', marginLeft: '11px' }}></div>
+                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                    <div style={{ background: 'var(--accent-warning)', color: '#000', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0 }}>4</div>
+                    <div style={{ marginTop: '2px' }}>交給 <strong>Anita</strong> 留存</div>
+                  </div>
                 </div>
               </div>
 
-              <div className="card" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                <h3 style={{ color: 'var(--accent-success)' }}>報核表處理</h3>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                  <span className="badge">1</span><div><strong>PSR</strong> 填寫報核表</div>
-                </div>
-                <div style={{ width: '2px', height: '10px', background: 'var(--border-color)', marginLeft: '14px' }}></div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                  <span className="badge">2</span><div>附上 <strong>折讓單掃描檔</strong></div>
-                </div>
-                <div style={{ width: '2px', height: '10px', background: 'var(--border-color)', marginLeft: '14px' }}></div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                  <span className="badge">3</span><div>送 <strong>直屬主管</strong> 審核</div>
-                </div>
-                <div style={{ width: '2px', height: '10px', background: 'var(--border-color)', marginLeft: '14px' }}></div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                  <span className="badge" style={{ backgroundColor: 'var(--accent-success)', color: '#000' }}>4</span><div>送 <strong>Champion</strong> 審核</div>
-                </div>
-                <div style={{ width: '2px', height: '10px', background: 'var(--border-color)', marginLeft: '14px' }}></div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                  <span className="badge warning">5</span><div>完成 <strong>用印</strong> 流程</div>
+              <div className="card" style={{ border: '1px solid rgba(16, 185, 129, 0.2)' }}>
+                <h3 style={{ color: 'var(--accent-success)', marginBottom: '1rem' }}>✅ 報核表處理</h3>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                    <div style={{ background: 'var(--accent-success)', color: '#000', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0 }}>1</div>
+                    <div style={{ marginTop: '2px' }}><strong>PSR</strong> 填寫報核表</div>
+                  </div>
+                  <div style={{ width: '2px', height: '12px', background: 'rgba(16, 185, 129, 0.3)', marginLeft: '11px' }}></div>
+                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                    <div style={{ background: 'var(--accent-success)', color: '#000', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0 }}>2</div>
+                    <div style={{ marginTop: '2px' }}>附上 <strong>折讓單掃描檔</strong></div>
+                  </div>
+                  <div style={{ width: '2px', height: '12px', background: 'rgba(16, 185, 129, 0.3)', marginLeft: '11px' }}></div>
+                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                    <div style={{ background: 'var(--accent-success)', color: '#000', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0 }}>3</div>
+                    <div style={{ marginTop: '2px' }}>送 <strong>直屬主管</strong> 審核</div>
+                  </div>
+                  <div style={{ width: '2px', height: '12px', background: 'rgba(16, 185, 129, 0.3)', marginLeft: '11px' }}></div>
+                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                    <div style={{ background: 'var(--accent-success)', color: '#000', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0 }}>4</div>
+                    <div style={{ marginTop: '2px' }}>送 <strong>Champion</strong> 審核</div>
+                  </div>
+                  <div style={{ width: '2px', height: '12px', background: 'rgba(16, 185, 129, 0.3)', marginLeft: '11px' }}></div>
+                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                    <div style={{ background: 'var(--accent-warning)', color: '#000', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0 }}>5</div>
+                    <div style={{ marginTop: '2px' }}>完成 <strong>用印</strong> 流程</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -445,26 +486,33 @@ function App() {
             <h1>退換貨處理</h1>
             <p style={{ color: 'var(--text-secondary)' }}>當發生商品退換貨需求時的標準流程。</p>
             
-            <div className="card" style={{ marginTop: '2rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-              <h3>流程步驟</h3>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                <span className="badge">1</span><div><strong>PSR</strong> 提出退換貨需求</div>
-              </div>
-              <div style={{ width: '2px', height: '20px', background: 'var(--border-color)', marginLeft: '14px' }}></div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                <span className="badge">2</span><div>取得授權後，填寫 <strong>退換貨處理單</strong></div>
-              </div>
-              <div style={{ width: '2px', height: '20px', background: 'var(--border-color)', marginLeft: '14px' }}></div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                <span className="badge">3</span><div>送 <strong>直屬主管</strong> 審核</div>
-              </div>
-              <div style={{ width: '2px', height: '20px', background: 'var(--border-color)', marginLeft: '14px' }}></div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                <span className="badge" style={{ backgroundColor: 'var(--accent-success)', color: '#000' }}>4</span><div>送 <strong>Champion</strong> 審核</div>
-              </div>
-              <div style={{ width: '2px', height: '20px', background: 'var(--border-color)', marginLeft: '14px' }}></div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                <span className="badge">5</span><div>由 <strong>Anita</strong> 安排物流退換貨</div>
+            <div className="card" style={{ marginTop: '2rem', border: '1px solid rgba(99, 102, 241, 0.2)' }}>
+              <h3 style={{ color: 'var(--accent-primary)', marginBottom: '1rem' }}>📌 流程步驟</h3>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+                <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                  <div style={{ background: 'var(--accent-primary)', color: '#fff', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0 }}>1</div>
+                  <div style={{ marginTop: '2px' }}><strong>PSR</strong> 提出退換貨需求</div>
+                </div>
+                <div style={{ width: '2px', height: '12px', background: 'rgba(99, 102, 241, 0.3)', marginLeft: '11px' }}></div>
+                <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                  <div style={{ background: 'var(--accent-primary)', color: '#fff', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0 }}>2</div>
+                  <div style={{ marginTop: '2px' }}>取得授權後，填寫 <strong>退換貨處理單</strong></div>
+                </div>
+                <div style={{ width: '2px', height: '12px', background: 'rgba(99, 102, 241, 0.3)', marginLeft: '11px' }}></div>
+                <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                  <div style={{ background: 'var(--accent-primary)', color: '#fff', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0 }}>3</div>
+                  <div style={{ marginTop: '2px' }}>送 <strong>直屬主管</strong> 審核</div>
+                </div>
+                <div style={{ width: '2px', height: '12px', background: 'rgba(99, 102, 241, 0.3)', marginLeft: '11px' }}></div>
+                <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                  <div style={{ background: 'var(--accent-success)', color: '#000', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0 }}>4</div>
+                  <div style={{ marginTop: '2px' }}>送 <strong>Champion</strong> 審核</div>
+                </div>
+                <div style={{ width: '2px', height: '12px', background: 'rgba(99, 102, 241, 0.3)', marginLeft: '11px' }}></div>
+                <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                  <div style={{ background: 'var(--accent-warning)', color: '#000', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0 }}>5</div>
+                  <div style={{ marginTop: '2px' }}>由 <strong>Anita</strong> 安排物流退換貨</div>
+                </div>
               </div>
             </div>
           </div>
@@ -477,27 +525,34 @@ function App() {
             <p style={{ color: 'var(--text-secondary)' }}>針對受控管的品項，進行出貨評估的流程。</p>
             
             <div className="grid-cards" style={{ marginTop: '2rem' }}>
-              <div className="card" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                <h3>流程步驟</h3>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                  <span className="badge">1</span><div>先詢問院方 <strong>庫存量</strong></div>
-                </div>
-                <div style={{ width: '2px', height: '10px', background: 'var(--border-color)', marginLeft: '14px' }}></div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                  <span className="badge">2</span><div>評估是否需要出貨</div>
-                </div>
-                <div style={{ width: '2px', height: '10px', background: 'var(--border-color)', marginLeft: '14px' }}></div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                  <span className="badge">3</span><div>送 <strong>直屬主管</strong> 審核</div>
-                </div>
-                <div style={{ width: '2px', height: '10px', background: 'var(--border-color)', marginLeft: '14px' }}></div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                  <span className="badge" style={{ backgroundColor: 'var(--accent-success)', color: '#000' }}>4</span><div>視品項與狀況，送 <strong>Champion</strong> 或 <strong>PM</strong> 確認</div>
+              <div className="card" style={{ border: '1px solid rgba(99, 102, 241, 0.2)' }}>
+                <h3 style={{ color: 'var(--accent-primary)', marginBottom: '1rem' }}>📌 流程步驟</h3>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                    <div style={{ background: 'var(--accent-primary)', color: '#fff', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0 }}>1</div>
+                    <div style={{ marginTop: '2px' }}>先詢問院方 <strong>庫存量</strong></div>
+                  </div>
+                  <div style={{ width: '2px', height: '12px', background: 'rgba(99, 102, 241, 0.3)', marginLeft: '11px' }}></div>
+                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                    <div style={{ background: 'var(--accent-primary)', color: '#fff', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0 }}>2</div>
+                    <div style={{ marginTop: '2px' }}>評估是否需要出貨</div>
+                  </div>
+                  <div style={{ width: '2px', height: '12px', background: 'rgba(99, 102, 241, 0.3)', marginLeft: '11px' }}></div>
+                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                    <div style={{ background: 'var(--accent-primary)', color: '#fff', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0 }}>3</div>
+                    <div style={{ marginTop: '2px' }}>送 <strong>直屬主管</strong> 審核</div>
+                  </div>
+                  <div style={{ width: '2px', height: '12px', background: 'rgba(99, 102, 241, 0.3)', marginLeft: '11px' }}></div>
+                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                    <div style={{ background: 'var(--accent-success)', color: '#000', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0 }}>4</div>
+                    <div style={{ marginTop: '2px' }}>視品項與狀況，送 <strong>Champion</strong> 或 <strong>PM</strong> 確認</div>
+                  </div>
                 </div>
               </div>
 
-              <div className="card" style={{ borderColor: 'var(--accent-danger)', background: 'rgba(239, 68, 68, 0.05)' }}>
-                <h3>⏰ 時效性提醒</h3>
+              <div className="card" style={{ position: 'relative', overflow: 'hidden', border: '1px solid rgba(239, 68, 68, 0.3)' }}>
+                <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'radial-gradient(circle at top right, rgba(239, 68, 68, 0.15), transparent 60%)', pointerEvents: 'none' }}></div>
+                <h3 style={{ color: '#ef4444', marginBottom: '1rem' }}>⏰ 時效性提醒</h3>
                 <ul style={{ color: 'var(--text-secondary)', paddingLeft: '1.2rem', margin: 0 }}>
                   <li style={{ fontSize: '1.2rem', color: 'var(--text-primary)', marginTop: '0.5rem' }}>
                     <strong>須於當日 15:00 前提出！</strong>
