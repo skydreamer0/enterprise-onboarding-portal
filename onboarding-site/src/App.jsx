@@ -570,24 +570,30 @@ function App() {
             <h1>Pre-Call Plan</h1>
             <p style={{ color: 'var(--text-secondary)' }}>拜訪客戶前的準備計畫與提交規範。</p>
             
-            <div className="card" style={{ marginTop: '2rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-              <h3>流程步驟</h3>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                <span className="badge">1</span><div><strong>PSR</strong> 完成計畫撰寫</div>
-              </div>
-              <div style={{ width: '2px', height: '20px', background: 'var(--border-color)', marginLeft: '14px' }}></div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                <span className="badge" style={{ backgroundColor: 'var(--accent-success)', color: '#000' }}>2</span><div>提供給 <strong>直屬主管</strong></div>
-              </div>
-              <div style={{ width: '2px', height: '20px', background: 'var(--border-color)', marginLeft: '14px' }}></div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                <span className="badge">3</span><div>同步副本給 <strong>Champion</strong></div>
+            <div className="card" style={{ marginTop: '2rem', border: '1px solid rgba(99, 102, 241, 0.2)' }}>
+              <h3 style={{ color: 'var(--accent-primary)', marginBottom: '1rem' }}>📌 流程步驟</h3>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+                <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                  <div style={{ background: 'var(--accent-primary)', color: '#fff', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0 }}>1</div>
+                  <div style={{ marginTop: '2px' }}><strong>PSR</strong> 完成計畫撰寫</div>
+                </div>
+                <div style={{ width: '2px', height: '12px', background: 'rgba(99, 102, 241, 0.3)', marginLeft: '11px' }}></div>
+                <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                  <div style={{ background: 'var(--accent-success)', color: '#000', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0 }}>2</div>
+                  <div style={{ marginTop: '2px' }}>提供給 <strong>直屬主管</strong></div>
+                </div>
+                <div style={{ width: '2px', height: '12px', background: 'rgba(99, 102, 241, 0.3)', marginLeft: '11px' }}></div>
+                <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                  <div style={{ background: 'var(--accent-primary)', color: '#fff', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0 }}>3</div>
+                  <div style={{ marginTop: '2px' }}>同步副本給 <strong>Champion</strong></div>
+                </div>
               </div>
             </div>
 
             <div className="grid-cards" style={{ marginTop: '2rem' }}>
-              <div className="card" style={{ borderColor: 'var(--accent-danger)', background: 'rgba(239, 68, 68, 0.05)' }}>
-                <h3>⏰ 時效性提醒</h3>
+              <div className="card" style={{ position: 'relative', overflow: 'hidden', border: '1px solid rgba(239, 68, 68, 0.3)' }}>
+                <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'radial-gradient(circle at top right, rgba(239, 68, 68, 0.15), transparent 60%)', pointerEvents: 'none' }}></div>
+                <h3 style={{ color: '#ef4444', marginBottom: '1rem' }}>⏰ 時效性提醒</h3>
                 <ul style={{ color: 'var(--text-secondary)', paddingLeft: '1.2rem', margin: 0 }}>
                   <li style={{ fontSize: '1.2rem', color: 'var(--text-primary)', marginTop: '0.5rem' }}>
                     <strong>最晚需於 Coaching 前一週完成！</strong>
@@ -605,8 +611,9 @@ function App() {
             <p style={{ color: 'var(--text-secondary)' }}>日常業務與行政費用的結報流程。</p>
             
             <div className="grid-cards" style={{ marginTop: '2rem' }}>
-              <div className="card" style={{ borderColor: 'var(--accent-warning)', background: 'rgba(245, 158, 11, 0.05)' }}>
-                <h3>⏰ 時效性提醒</h3>
+              <div className="card" style={{ position: 'relative', overflow: 'hidden', border: '1px solid rgba(245, 158, 11, 0.3)' }}>
+                <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'radial-gradient(circle at top right, rgba(245, 158, 11, 0.15), transparent 60%)', pointerEvents: 'none' }}></div>
+                <h3 style={{ color: '#f59e0b', marginBottom: '1rem' }}>⏰ 時效性提醒</h3>
                 <ul style={{ color: 'var(--text-secondary)', paddingLeft: '1.2rem', margin: 0 }}>
                   <li style={{ fontSize: '1.2rem', color: 'var(--text-primary)', marginTop: '0.5rem' }}>
                     <strong>每個月申報一次！</strong>
@@ -625,8 +632,9 @@ function App() {
             <p style={{ color: 'var(--text-secondary)' }}>月度營運回顧與業務會議準備。</p>
             
             <div className="grid-cards" style={{ marginTop: '2rem' }}>
-              <div className="card" style={{ borderColor: 'var(--accent-warning)', background: 'rgba(245, 158, 11, 0.05)' }}>
-                <h3>⏰ 時效性提醒</h3>
+              <div className="card" style={{ position: 'relative', overflow: 'hidden', border: '1px solid rgba(245, 158, 11, 0.3)' }}>
+                <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'radial-gradient(circle at top right, rgba(245, 158, 11, 0.15), transparent 60%)', pointerEvents: 'none' }}></div>
+                <h3 style={{ color: '#f59e0b', marginBottom: '1rem' }}>⏰ 時效性提醒</h3>
                 <ul style={{ color: 'var(--text-secondary)', paddingLeft: '1.2rem', margin: 0 }}>
                   <li style={{ fontSize: '1.2rem', color: 'var(--text-primary)', marginTop: '0.5rem' }}>
                     <strong>每個月執行一次！</strong>
@@ -645,8 +653,9 @@ function App() {
             <p style={{ color: 'var(--text-secondary)' }}>提交下一週的客戶拜訪與業務行程安排。</p>
             
             <div className="grid-cards" style={{ marginTop: '2rem' }}>
-              <div className="card" style={{ borderColor: 'var(--accent-danger)', background: 'rgba(239, 68, 68, 0.05)' }}>
-                <h3>⏰ 時效性提醒</h3>
+              <div className="card" style={{ position: 'relative', overflow: 'hidden', border: '1px solid rgba(239, 68, 68, 0.3)' }}>
+                <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'radial-gradient(circle at top right, rgba(239, 68, 68, 0.15), transparent 60%)', pointerEvents: 'none' }}></div>
+                <h3 style={{ color: '#ef4444', marginBottom: '1rem' }}>⏰ 時效性提醒</h3>
                 <ul style={{ color: 'var(--text-secondary)', paddingLeft: '1.2rem', margin: 0 }}>
                   <li style={{ fontSize: '1.2rem', color: 'var(--text-primary)', marginTop: '0.5rem' }}>
                     <strong>每個禮拜五要交！</strong>
