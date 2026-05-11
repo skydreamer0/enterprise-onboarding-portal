@@ -10,19 +10,19 @@ const FormsLibrary = () => {
           <ul style={{ listStyle: 'none', padding: 0, margin: '1rem 0 0 0' }}>
             <li style={{ padding: '1rem', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '8px', marginBottom: '0.8rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', transition: 'all 0.2s' }}>
               <span style={{ fontWeight: 500, color: 'var(--text-primary)' }}>付款憑單</span>
-              <a href="https://github.com/skydreamer0/enterprise-onboarding-portal/raw/main/03_行政作業/01_行政範本與月結報支/[範本]_PMS_付款憑證.xlsx" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.4rem 1rem', fontSize: '0.85rem', textDecoration: 'none', background: 'rgba(99, 102, 241, 0.15)', color: 'var(--accent-primary)', border: '1px solid rgba(99, 102, 241, 0.3)' }}>下載</a>
+              <a href="https://github.com/skydreamer0/enterprise-onboarding-portal/raw/main/03_行政作業/01_行政範本與月結報支/%5B範本%5D_PMS_付款憑證.xlsx" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.4rem 1rem', fontSize: '0.85rem', textDecoration: 'none', background: 'rgba(99, 102, 241, 0.15)', color: 'var(--accent-primary)', border: '1px solid rgba(99, 102, 241, 0.3)' }}>下載</a>
             </li>
             <li style={{ padding: '1rem', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '8px', marginBottom: '0.8rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', transition: 'all 0.2s' }}>
               <span style={{ fontWeight: 500, color: 'var(--text-primary)' }}>報核表</span>
-              <a href="https://github.com/skydreamer0/enterprise-onboarding-portal/raw/main/03_行政作業/01_行政範本與月結報支/[範本]_報核表.doc" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.4rem 1rem', fontSize: '0.85rem', textDecoration: 'none', background: 'rgba(99, 102, 241, 0.15)', color: 'var(--accent-primary)', border: '1px solid rgba(99, 102, 241, 0.3)' }}>下載</a>
+              <a href="https://github.com/skydreamer0/enterprise-onboarding-portal/raw/main/03_行政作業/01_行政範本與月結報支/%5B範本%5D_報核表.doc" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.4rem 1rem', fontSize: '0.85rem', textDecoration: 'none', background: 'rgba(99, 102, 241, 0.15)', color: 'var(--accent-primary)', border: '1px solid rgba(99, 102, 241, 0.3)' }}>下載</a>
             </li>
             <li style={{ padding: '1rem', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '8px', marginBottom: '0.8rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', transition: 'all 0.2s' }}>
               <span style={{ fontWeight: 500, color: 'var(--text-primary)' }}>折讓單</span>
-              <a href="https://github.com/skydreamer0/enterprise-onboarding-portal/raw/main/03_行政作業/01_行政範本與月結報支/[範本]_折讓單.xls" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.4rem 1rem', fontSize: '0.85rem', textDecoration: 'none', background: 'rgba(99, 102, 241, 0.15)', color: 'var(--accent-primary)', border: '1px solid rgba(99, 102, 241, 0.3)' }}>下載</a>
+              <a href="https://github.com/skydreamer0/enterprise-onboarding-portal/raw/main/03_行政作業/01_行政範本與月結報支/%5B範本%5D_折讓單.xls" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.4rem 1rem', fontSize: '0.85rem', textDecoration: 'none', background: 'rgba(99, 102, 241, 0.15)', color: 'var(--accent-primary)', border: '1px solid rgba(99, 102, 241, 0.3)' }}>下載</a>
             </li>
             <li style={{ padding: '1rem', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '8px', marginBottom: '0.8rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', transition: 'all 0.2s' }}>
               <span style={{ fontWeight: 500, color: 'var(--text-primary)' }}>演講/主持費收據簽收單</span>
-              <a href="https://github.com/skydreamer0/enterprise-onboarding-portal/raw/main/03_行政作業/01_行政範本與月結報支/[範本]_演講費收據_模板.docx" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.4rem 1rem', fontSize: '0.85rem', textDecoration: 'none', background: 'rgba(99, 102, 241, 0.15)', color: 'var(--accent-primary)', border: '1px solid rgba(99, 102, 241, 0.3)' }}>下載</a>
+              <a href="https://github.com/skydreamer0/enterprise-onboarding-portal/raw/main/03_行政作業/01_行政範本與月結報支/%5B範本%5D_演講費收據_模板.docx" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.4rem 1rem', fontSize: '0.85rem', textDecoration: 'none', background: 'rgba(99, 102, 241, 0.15)', color: 'var(--accent-primary)', border: '1px solid rgba(99, 102, 241, 0.3)' }}>下載</a>
             </li>
           </ul>
         </div>
@@ -62,7 +62,7 @@ const FormsLibrary = () => {
             </li>
             <li style={{ padding: '1rem', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '8px', marginBottom: '0.8rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', transition: 'all 0.2s' }}>
               <span style={{ fontWeight: 500, color: 'var(--text-primary)' }}>EXPENSE 費用申報表</span>
-              <a href="https://github.com/skydreamer0/enterprise-onboarding-portal/raw/main/03_行政作業/01_行政範本與月結報支/[範本]_expense_月結表.xlsx" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.4rem 1rem', fontSize: '0.85rem', textDecoration: 'none', background: 'rgba(99, 102, 241, 0.15)', color: 'var(--accent-primary)', border: '1px solid rgba(99, 102, 241, 0.3)' }}>下載</a>
+              <a href="https://github.com/skydreamer0/enterprise-onboarding-portal/raw/main/03_行政作業/01_行政範本與月結報支/%5B範本%5D_expense_月結表.xlsx" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.4rem 1rem', fontSize: '0.85rem', textDecoration: 'none', background: 'rgba(99, 102, 241, 0.15)', color: 'var(--accent-primary)', border: '1px solid rgba(99, 102, 241, 0.3)' }}>下載</a>
             </li>
             <li style={{ padding: '1rem', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '8px', marginBottom: '0.8rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', transition: 'all 0.2s' }}>
               <span style={{ fontWeight: 500, color: 'var(--text-primary)' }}>MOR 月會報告模板</span>
