@@ -23,7 +23,7 @@
     *   重構 `index.css`，定義全域 CSS 變數。
     *   包含 Semantic Colors (`--brand-primary`, `--surface-default`, `--text-muted`)。
     *   定義 Spacing System (採用 8px Grid)。
-*   [ ] **2.2 共用 UI 元件庫 (Componentization)**
+*   [x] **2.2 共用 UI 元件庫 (Componentization)**
     *   建立基礎元件 (Atoms)：`Button`, `Badge`, `Card`, `Icon`.
     *   建立複合元件 (Molecules)：`DownloadItem`, `StepProgress` (流程進度條).
 *   [x] **2.3 視覺升級**
