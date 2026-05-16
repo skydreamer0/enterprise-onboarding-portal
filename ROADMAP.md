@@ -49,7 +49,7 @@
 
 *   [x] **4.1 建立 `DESIGN.md`**
     *   撰寫開發與設計規範，供未來開發者或 AI Agent 參考，確保 UI 一致性。
-*   [ ] **4.2 CI/CD 與自動化**
+*   [x] **4.2 CI/CD 與自動化**
     *   設定 GitHub Actions 自動部署至靜態伺服器 (如 GitHub Pages, Vercel)。
     *   設定 Linter (ESLint) 與 Prettier 確保程式碼品質。
 
