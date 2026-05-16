@@ -19,14 +19,14 @@
 ## Phase 2: 設計系統與 UI 優化 (Design Systems & Styling)
 **目標**：建立系統化的 Design Tokens，提升介面的現代感 (Glassmorphism, Dark Mode) 與一致性。
 
-*   [ ] **2.1 建立設計令牌 (Design Tokens)**
+*   [x] **2.1 建立設計令牌 (Design Tokens)**
     *   重構 `index.css`，定義全域 CSS 變數。
     *   包含 Semantic Colors (`--brand-primary`, `--surface-default`, `--text-muted`)。
     *   定義 Spacing System (採用 8px Grid)。
 *   [ ] **2.2 共用 UI 元件庫 (Componentization)**
     *   建立基礎元件 (Atoms)：`Button`, `Badge`, `Card`, `Icon`.
     *   建立複合元件 (Molecules)：`DownloadItem`, `StepProgress` (流程進度條).
-*   [ ] **2.3 視覺升級**
+*   [x] **2.3 視覺升級**
     *   強化 Glassmorphism 效果 (背景模糊、漸層邊框)。
     *   優化排版，確保內容閱讀區塊的最大寬度 (Max-width) 適合長篇閱讀。
 

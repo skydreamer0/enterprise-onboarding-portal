@@ -8,7 +8,9 @@ const Layout = () => {
       <Sidebar />
       <main className="main-content">
         <Header />
-        <Outlet />
+        <div className="content-container">
+          <Outlet />
+        </div>
       </main>
     </div>
   );
