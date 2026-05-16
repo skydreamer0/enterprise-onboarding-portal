@@ -37,7 +37,7 @@
     *   安裝並設定 Vite 支援 `.mdx` 格式 (`@mdx-js/rollup` 等套件)。
     *   將 JSON/JS 的內容轉換為 MDX 格式，讓維護者能以 Markdown 語法撰寫圖文並茂的教學。
     *   在 MDX 中支援嵌入 React 元件 (如 `Try It Out` 按鈕或動態提示框)。
-*   [ ] **3.2 全站搜尋功能 (Global Search)**
+*   [x] **3.2 全站搜尋功能 (Global Search)**
     *   導入 `Fuse.js` 或相似的輕量級模糊搜尋套件。
     *   實作搜尋彈窗 (Command Palette `Ctrl + K`)，快速導航至特定的流程或表單。
 *   [ ] **3.3 互動式導覽 (Interactive Onboarding)**
