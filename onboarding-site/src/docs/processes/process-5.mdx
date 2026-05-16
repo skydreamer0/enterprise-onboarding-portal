@@ -1,0 +1,16 @@
+import Card from '../../components/ui/Card';
+import StepProgress from '../../components/ui/StepProgress';
+
+<Card style={{ marginTop: 'var(--space-8)' }}>
+  <h3 style={{ marginBottom: 'var(--space-4)' }}>流程步驟</h3>
+  <StepProgress 
+    steps={[
+      { title: 'PSR 提出退換貨需求' },
+      { title: '取得授權後，填寫 退換貨處理單' },
+      { title: '送 直屬主管 審核' },
+      { title: '送 Champion 審核' },
+      { title: '由 Anita 安排物流退換貨' },
+    ]}
+    currentStep={4}
+  />
+</Card>

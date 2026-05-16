@@ -1,0 +1,27 @@
+import Card from '../../components/ui/Card';
+import StepProgress from '../../components/ui/StepProgress';
+
+<div className="grid-cards">
+  <Card>
+    <h3 style={{ marginBottom: 'var(--space-4)' }}>流程步驟</h3>
+    <StepProgress 
+      steps={[
+        { title: '先詢問院方 庫存量' },
+        { title: '評估是否需要出貨' },
+        { title: '送 直屬主管 審核' },
+        { title: '視品項與狀況，送 Champion 或 PM 確認' },
+      ]}
+      currentStep={3}
+    />
+  </Card>
+
+  <Card style={{ border: '1px solid rgba(239, 68, 68, 0.3)', background: 'rgba(239, 68, 68, 0.05)' }}>
+    <h3 style={{ color: 'var(--accent-danger)' }}>⏰ 時效性提醒</h3>
+    <ul style={{ color: 'var(--text-secondary)', paddingLeft: 'var(--space-4)', margin: 0 }}>
+      <li style={{ fontSize: 'var(--font-lg)', color: 'var(--text-primary)', marginTop: 'var(--space-2)' }}>
+        <strong>須於當日 15:00 前提出！</strong>
+      </li>
+      <li style={{ marginTop: 'var(--space-2)' }}>逾時將影響出貨進度，請務必掌握時間。</li>
+    </ul>
+  </Card>
+</div>

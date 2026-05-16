@@ -1,0 +1,30 @@
+import Card from '../../components/ui/Card';
+import StepProgress from '../../components/ui/StepProgress';
+
+<Card style={{ marginTop: 'var(--space-8)' }}>
+  <h3 style={{ color: 'var(--accent-primary)', marginBottom: 'var(--space-4)' }}>📌 流程步驟</h3>
+  <StepProgress 
+    steps={[
+      { title: 'PSR 準備資料' },
+      { title: '送 直屬主管 審核' },
+      { title: '送 Champion 最終確認' },
+    ]}
+    currentStep={2}
+  />
+</Card>
+
+<div className="grid-cards">
+  <Card style={{ border: '1px solid rgba(239, 68, 68, 0.3)' }}>
+    <h3 style={{ color: 'var(--accent-danger)', marginBottom: 'var(--space-4)' }}>🔔 注意事項</h3>
+    <ul style={{ color: 'var(--text-secondary)', paddingLeft: 'var(--space-4)', margin: 0 }}>
+      <li>需先向主管確認欲申請的「費審編號」。</li>
+    </ul>
+  </Card>
+  <Card style={{ border: '1px solid rgba(245, 158, 11, 0.3)' }}>
+    <h3 style={{ color: 'var(--accent-warning)', marginBottom: 'var(--space-4)' }}>⚠️ 憑單與紙本處理</h3>
+    <ul style={{ color: 'var(--text-secondary)', paddingLeft: 'var(--space-4)', margin: 0 }}>
+      <li style={{ marginBottom: 'var(--space-2)' }}>付款憑單與單據掃描後，提供給 主管 與 Champion。</li>
+      <li><strong>紙本正本請交給 Anita</strong>。</li>
+    </ul>
+  </Card>
+</div>

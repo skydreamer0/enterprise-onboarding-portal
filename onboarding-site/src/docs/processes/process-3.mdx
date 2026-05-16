@@ -1,0 +1,31 @@
+import Card from '../../components/ui/Card';
+import StepProgress from '../../components/ui/StepProgress';
+
+<div className="grid-cards">
+  <Card>
+    <h3 style={{ color: 'var(--accent-primary)', marginBottom: 'var(--space-4)' }}>情境一：提出報價需求</h3>
+    <StepProgress 
+      steps={[
+        { title: 'PSR 提出需求取得授權' },
+        { title: '填寫 報價單 & 用印申請單' },
+        { title: '送 直屬主管 審核' },
+        { title: '送 Champion 審核' },
+        { title: '交由 Anita 協助用印' },
+      ]}
+      currentStep={4}
+    />
+  </Card>
+
+  <Card>
+    <h3 style={{ color: 'var(--accent-success)', marginBottom: 'var(--space-4)' }}>情境二：院方接受價格後</h3>
+    <StepProgress 
+      steps={[
+        { title: '需於公司系統 建立價格' },
+        { title: '填寫 特惠價格卡' },
+        { title: '送 直屬主管 審核' },
+        { title: '送 Champion 審核' },
+      ]}
+      currentStep={3}
+    />
+  </Card>
+</div>

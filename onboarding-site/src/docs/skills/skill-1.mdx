@@ -1,0 +1,48 @@
+import Card from '../../components/ui/Card';
+import StepProgress from '../../components/ui/StepProgress';
+
+<div className="grid-cards">
+  <Card>
+    <h3 style={{ color: 'var(--accent-primary)', marginBottom: 'var(--space-4)' }}>🎯 辦活動三大步驟</h3>
+    <StepProgress 
+      steps={[
+        { title: '找出客戶不處方的三大主因' },
+        { title: '找出合適的講師', description: '溝通怎麼解決三大主因' },
+        { title: '會議後的 F/U', description: '確認有無解決三大主因' },
+      ]}
+      currentStep={2}
+    />
+  </Card>
+
+  <Card style={{ border: '1px solid rgba(16, 185, 129, 0.2)' }}>
+    <h3 style={{ color: 'var(--accent-success)', marginBottom: 'var(--space-4)' }}>✅ 活動時程檢核表</h3>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-4)' }}>
+      <div style={{ background: 'rgba(255,255,255,0.03)', padding: 'var(--space-3)', borderRadius: 'var(--radius-md)', borderLeft: '3px solid var(--accent-success)' }}>
+        <strong style={{ display: 'block', marginBottom: 'var(--space-2)', color: 'var(--text-primary)' }}>活動前</strong>
+        <ul style={{ margin: 0, paddingLeft: 'var(--space-4)', color: 'var(--text-secondary)', fontSize: 'var(--font-sm)' }}>
+          <li>Speaker、Moderator確認 (Slides事先提供、Review Slides)</li>
+          <li>餐廳選擇：以有包廂、可投影者佳</li>
+          <li>費審會：1週前確認有無編號</li>
+        </ul>
+      </div>
+      <div style={{ background: 'rgba(255,255,255,0.03)', padding: 'var(--space-3)', borderRadius: 'var(--radius-md)', borderLeft: '3px solid var(--accent-success)' }}>
+        <strong style={{ display: 'block', marginBottom: 'var(--space-2)', color: 'var(--text-primary)' }}>活動中</strong>
+        <ul style={{ margin: 0, paddingLeft: 'var(--space-4)', color: 'var(--text-secondary)', fontSize: 'var(--font-sm)' }}>
+          <li>簽到表、筆、Detailing Aids</li>
+          <li>場佈、確認現場(投影)狀況</li>
+          <li>協助餐點發放(Lecture) / 座位安排與催餐(RTD)</li>
+          <li>結帳、收拾與接送客戶工作分配</li>
+        </ul>
+      </div>
+      <div style={{ background: 'rgba(255,255,255,0.03)', padding: 'var(--space-3)', borderRadius: 'var(--radius-md)', borderLeft: '3px solid var(--accent-success)' }}>
+        <strong style={{ display: 'block', marginBottom: 'var(--space-2)', color: 'var(--text-primary)' }}>活動後</strong>
+        <ul style={{ margin: 0, paddingLeft: 'var(--space-4)', color: 'var(--text-secondary)', fontSize: 'var(--font-sm)' }}>
+          <li>演講/主持費收據簽收單</li>
+          <li>付款憑單</li>
+          <li>簽到表(需符合費審會人數)</li>
+          <li>發票</li>
+        </ul>
+      </div>
+    </div>
+  </Card>
+</div>

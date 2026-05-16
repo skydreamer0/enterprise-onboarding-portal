@@ -1,0 +1,31 @@
+import Card from '../../components/ui/Card';
+import StepProgress from '../../components/ui/StepProgress';
+
+<div className="grid-cards">
+  <Card>
+    <h3 style={{ color: 'var(--accent-primary)', marginBottom: 'var(--space-4)' }}>折讓單處理</h3>
+    <StepProgress 
+      steps={[
+        { title: 'PSR 填寫折讓單' },
+        { title: '交由 醫院採購 蓋章' },
+        { title: '收回回執聯' },
+        { title: '交給 Anita 留存' },
+      ]}
+      currentStep={3}
+    />
+  </Card>
+
+  <Card>
+    <h3 style={{ color: 'var(--accent-success)', marginBottom: 'var(--space-4)' }}>報核表處理</h3>
+    <StepProgress 
+      steps={[
+        { title: 'PSR 填寫報核表' },
+        { title: '附上 折讓單掃描檔' },
+        { title: '送 直屬主管 審核' },
+        { title: '送 Champion 審核' },
+        { title: '完成 用印 流程' },
+      ]}
+      currentStep={4}
+    />
+  </Card>
+</div>

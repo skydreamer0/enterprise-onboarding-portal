@@ -33,7 +33,7 @@
 ## Phase 3: 導入 MDX 與進階功能 (Advanced Content & Search)
 **目標**：實現 Markdown-Driven 的文件撰寫體驗，並加入全站搜尋，大幅降低新人的尋找成本。
 
-*   [ ] **3.1 導入 MDX 支援**
+*   [x] **3.1 導入 MDX 支援**
     *   安裝並設定 Vite 支援 `.mdx` 格式 (`@mdx-js/rollup` 等套件)。
     *   將 JSON/JS 的內容轉換為 MDX 格式，讓維護者能以 Markdown 語法撰寫圖文並茂的教學。
     *   在 MDX 中支援嵌入 React 元件 (如 `Try It Out` 按鈕或動態提示框)。
