@@ -12,7 +12,7 @@
 *   [x] **1.2 內容分離 (Content Modules)**
     *   將 `ProcessDetail.jsx` 與 `SkillDetail.jsx` 中的靜態文字抽離。
     *   初期可先抽離為 JSON 或 JS 物件檔案 (`src/data/content/`)。
-*   [ ] **1.3 靜態資源映射 (Assets Mapping)**
+*   [x] **1.3 靜態資源映射 (Assets Mapping)**
     *   盤點根目錄下的 Excel/Word 等行政範本。
     *   在前端建立靜態連結映射，讓 `FormsLibrary.jsx` 可以準確提供下載連結。
 
