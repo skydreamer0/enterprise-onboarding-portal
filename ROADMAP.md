@@ -9,7 +9,7 @@
     *   實作 `src/data/registry.js`。
     *   將所有流程 (Process)、心法 (Skills)、表單 (Forms) 的 Metadata (如 `id`, `title`, `icon`, `category`) 集中管理。
     *   重構 `Sidebar.jsx` 與 `App.jsx`，使其動態讀取 Registry，而非寫死在程式碼中。
-*   [ ] **1.2 內容分離 (Content Modules)**
+*   [x] **1.2 內容分離 (Content Modules)**
     *   將 `ProcessDetail.jsx` 與 `SkillDetail.jsx` 中的靜態文字抽離。
     *   初期可先抽離為 JSON 或 JS 物件檔案 (`src/data/content/`)。
 *   [ ] **1.3 靜態資源映射 (Assets Mapping)**
