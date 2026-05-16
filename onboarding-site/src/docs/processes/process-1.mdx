@@ -1,5 +1,17 @@
 import Card from '../../components/ui/Card';
 import StepProgress from '../../components/ui/StepProgress';
+import Checklist from '../../components/ui/Checklist';
+
+<Checklist 
+  id="process-1-requirements"
+  title="行銷費用申請檢核清單"
+  items={[
+    '確認活動申請表 (Agenda) 已填寫完整',
+    '效益預估表 (Benefit Projection) 已計算',
+    '相關合約或報價單已掃描存檔',
+    '確認符合行銷審會送件時間'
+  ]}
+/>
 
 <Card style={{ marginTop: 'var(--space-8)' }}>
   <h3 style={{ color: 'var(--accent-primary)', marginBottom: 'var(--space-4)' }}>📌 流程步驟</h3>

@@ -40,7 +40,7 @@
 *   [x] **3.2 全站搜尋功能 (Global Search)**
     *   導入 `Fuse.js` 或相似的輕量級模糊搜尋套件。
     *   實作搜尋彈窗 (Command Palette `Ctrl + K`)，快速導航至特定的流程或表單。
-*   [ ] **3.3 互動式導覽 (Interactive Onboarding)**
+*   [x] **3.3 互動式導覽 (Interactive Onboarding)**
     *   首頁加入「快速開始」的嚮導流程。
     *   針對核心的報核或折讓流程，加入互動式的步驟檢核表 (Checklist)。
 
