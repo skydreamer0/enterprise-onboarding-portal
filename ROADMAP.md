@@ -47,7 +47,7 @@
 ## Phase 4: 維護與擴充 (Maintenance & Scaling)
 **目標**：確保專案的長期健康與可維護性。
 
-*   [ ] **4.1 建立 `DESIGN.md`**
+*   [x] **4.1 建立 `DESIGN.md`**
     *   撰寫開發與設計規範，供未來開發者或 AI Agent 參考，確保 UI 一致性。
 *   [ ] **4.2 CI/CD 與自動化**
     *   設定 GitHub Actions 自動部署至靜態伺服器 (如 GitHub Pages, Vercel)。
