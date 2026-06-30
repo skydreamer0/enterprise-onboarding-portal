@@ -1,5 +1,3 @@
-import React from 'react';
-
 const StepProgress = ({ steps, currentStep = 0, orientation = 'vertical' }) => {
   const isVertical = orientation === 'vertical';
 
@@ -11,7 +9,7 @@ const StepProgress = ({ steps, currentStep = 0, orientation = 'vertical' }) => {
     padding: 'var(--space-2)',
   };
 
-  const stepStyle = (index) => ({
+  const stepStyle = () => ({
     display: 'flex',
     flexDirection: isVertical ? 'row' : 'column',
     alignItems: 'center',
@@ -60,7 +58,7 @@ const StepProgress = ({ steps, currentStep = 0, orientation = 'vertical' }) => {
   return (
     <div style={containerStyle}>
       {steps.map((step, index) => (
-        <div key={index} style={stepStyle(index)}>
+        <div key={index} style={stepStyle()}>
           <div style={{ position: 'relative' }}>
             <div style={circleStyle(index)}>
               {index + 1}

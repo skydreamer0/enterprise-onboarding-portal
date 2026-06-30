@@ -1,49 +1,49 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Fuse from 'fuse.js';
 import { PROCESS_DATA, SKILL_DATA } from '../../data/registry';
 import { FORMS_DATA } from '../../data/forms';
 
+const searchData = [
+  ...Object.entries(PROCESS_DATA).map(([id, data]) => ({
+    id,
+    type: '流程',
+    title: data.title,
+    subtitle: data.subtitle,
+    path: `/process/${id}`
+  })),
+  ...Object.entries(SKILL_DATA).map(([id, data]) => ({
+    id,
+    type: '心法',
+    title: data.title,
+    subtitle: data.subtitle,
+    path: `/skills/${id}`
+  })),
+  ...FORMS_DATA.flatMap(category => category.items.map(item => ({
+    id: item.name,
+    type: '表單',
+    title: item.name,
+    subtitle: category.category,
+    path: '/forms',
+    url: item.url
+  })))
+];
+
+const fuse = new Fuse(searchData, {
+  keys: ['title', 'subtitle', 'type'],
+  threshold: 0.3,
+  includeMatches: true
+});
+
 const Search = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState('');
-  const [results, setResults] = useState([]);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const navigate = useNavigate();
   const inputRef = useRef(null);
   const modalRef = useRef(null);
 
-  // Prepare data for indexing
-  const searchData = [
-    ...Object.entries(PROCESS_DATA).map(([id, data]) => ({
-      id,
-      type: '流程',
-      title: data.title,
-      subtitle: data.subtitle,
-      path: `/process/${id}`
-    })),
-    ...Object.entries(SKILL_DATA).map(([id, data]) => ({
-      id,
-      type: '心法',
-      title: data.title,
-      subtitle: data.subtitle,
-      path: `/skills/${id}`
-    })),
-    ...FORMS_DATA.flatMap(category => category.items.map(item => ({
-      id: item.name,
-      type: '表單',
-      title: item.name,
-      subtitle: category.category,
-      path: '/forms',
-      url: item.url
-    })))
-  ];
-
-  const fuse = new Fuse(searchData, {
-    keys: ['title', 'subtitle', 'type'],
-    threshold: 0.3,
-    includeMatches: true
-  });
+  const results = query.trim() === '' ? [] : fuse.search(query).slice(0, 8);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -64,16 +64,6 @@ const Search = () => {
       inputRef.current.focus();
     }
   }, [isOpen]);
-
-  useEffect(() => {
-    if (query.trim() === '') {
-      setResults([]);
-      return;
-    }
-    const searchResults = fuse.search(query).slice(0, 8);
-    setResults(searchResults);
-    setSelectedIndex(0);
-  }, [query]);
 
   const handleSelect = (result) => {
     setIsOpen(false);
@@ -121,7 +111,10 @@ const Search = () => {
                 type="text"
                 placeholder="輸入關鍵字搜尋..."
                 value={query}
-                onChange={(e) => setQuery(e.target.value)}
+                onChange={(e) => {
+                  setQuery(e.target.value);
+                  setSelectedIndex(0);
+                }}
                 onKeyDown={handleKeyDown}
                 className="search-input"
               />
