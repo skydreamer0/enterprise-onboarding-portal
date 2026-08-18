@@ -56,12 +56,23 @@
 *   **Checklist**：表頭顯示完成計數與進度線，狀態存於 LocalStorage。
 *   **Search**：`Fuse.js` 模糊搜尋，快捷鍵 `Ctrl / ⌘ + K`。
 
-## 5. 內容管理 (MDX)
+## 5. 資料來源與連結關係 (Single Source of Truth)
+`src/data/registry.js` 是導覽與關聯的唯一來源，`src/data/forms.js` 是下載連結的唯一來源；頁面一律由這兩份資料衍生，不得各自寫死清單。
+
+*   `NAV_GROUPS`：側欄導覽結構。首頁「主題索引」與麵包屑分類皆由它衍生（`CONTENT_GROUPS`、`DOC_SEQUENCE`）。
+*   `PROCESS_DATA` / `SKILL_DATA`：每篇文件除 title / subtitle 外，另有 `forms`（表單 id）與 `roles`（角色 id），驅動文末的「本篇會用到的表單」「需要對接的窗口」。
+*   `ROLE_DATA`：角色清單，`id` 同時是 `/roles` 頁的錨點（`/roles#role-anita`）。
+*   `FORMS_DATA`：每份表單有 `id`，供 `FORMS_BY_ID` 反查；表單庫再反向推導「用於：哪些文件」。
+*   `src/data/registry-links.js`：關聯查表的集中出口，避免 registry 與 forms 互相 import 造成循環相依。
+
+新增一篇文件時，只需在 `registry.js` 補一筆（導覽 + metadata + 關聯 id）並在 `docs/index.js` 註冊，首頁索引、麵包屑、上下篇導覽、表單反向連結會自動同步。
+
+## 6. 內容管理 (MDX)
 *   流程文件：`src/docs/processes/`；心法文件：`src/docs/skills/`；新增後於 `src/docs/index.js` 註冊，並在 `src/data/registry.js` 補上 metadata 與導覽項目。
 *   MDX 內請使用 token（如 `var(--accent-warning)`、`var(--tint-danger)`），勿寫死亮色系色碼——淺色底會造成對比不足。
 *   Card 內若要放段落文字，請使用 `<div>` 而非 `<p>`，避免 MDX 產生巢狀 `<p>`。
 
-## 6. 代碼規範 (Engineering)
+## 7. 代碼規範 (Engineering)
 *   **React 19**：使用最新特性，避免不必要的 Class Components。
 *   **Naming**：檔案 `PascalCase.jsx` / `kebab-case.mdx`；變數 `camelCase`；CSS 類名 `kebab-case`。
 *   **Conventional Commits**：`feat:`, `fix:`, `refactor:`, `docs:`, `style:`。

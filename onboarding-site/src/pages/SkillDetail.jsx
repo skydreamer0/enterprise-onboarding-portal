@@ -2,6 +2,8 @@ import { useLocation, useParams } from 'react-router-dom';
 import { SKILL_DATA } from '../data/registry';
 import { skills } from '../docs';
 import PageHeader from '../components/ui/PageHeader';
+import RelatedLinks from '../components/ui/RelatedLinks';
+import DocFooterNav from '../components/layout/DocFooterNav';
 import { getNavContext } from '../utils/nav';
 
 const SkillDetail = () => {
@@ -24,6 +26,8 @@ const SkillDetail = () => {
       <div className="content-body prose">
         {ContentComponent ? <ContentComponent /> : <p>此心法的內容尚未建立。</p>}
       </div>
+      <RelatedLinks forms={data.forms} roles={data.roles} />
+      <DocFooterNav currentPath={pathname} />
     </article>
   );
 };

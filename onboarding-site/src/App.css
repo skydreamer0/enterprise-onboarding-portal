@@ -644,3 +644,324 @@
   font-size: var(--font-2xl);
   margin: 0;
 }
+
+/* ---------- 首頁：快速上手步驟 ---------- */
+.step-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  background: var(--surface-default);
+  overflow: hidden;
+}
+
+.step-list > li + li .step-item {
+  border-top: 1px solid var(--border-color);
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-5);
+  color: inherit;
+  transition: background-color 0.15s ease;
+}
+
+.step-item:hover {
+  background: var(--bg-surface-hover);
+  text-decoration: none;
+}
+
+.step-index {
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: var(--font-xs);
+  letter-spacing: 0.08em;
+  color: var(--accent-secondary);
+}
+
+.step-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.step-title {
+  display: block;
+  font-size: var(--font-base);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.step-desc {
+  display: block;
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+}
+
+.step-arrow {
+  flex: none;
+  color: var(--border-strong);
+}
+
+.step-item:hover .step-arrow {
+  color: var(--accent-primary);
+}
+
+/* ---------- 首頁：主題索引 ---------- */
+.index-card h3 {
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.index-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.index-link {
+  display: block;
+  padding: var(--space-2) var(--space-3);
+  margin: 0 calc(var(--space-3) * -1);
+  border-radius: var(--radius-sm);
+  color: inherit;
+  transition: background-color 0.12s ease;
+}
+
+.index-link:hover {
+  background: var(--bg-surface-hover);
+  text-decoration: none;
+}
+
+.index-link-title {
+  display: block;
+  font-size: var(--font-sm);
+  font-weight: 500;
+  color: var(--accent-primary);
+}
+
+.index-link-desc {
+  display: block;
+  font-size: var(--font-xs);
+  color: var(--text-tertiary);
+  line-height: 1.6;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.resource-card {
+  color: inherit;
+}
+
+.resource-card:hover {
+  text-decoration: none;
+}
+
+.resource-card p {
+  margin-bottom: 0;
+}
+
+/* ---------- 文件關聯區塊 ---------- */
+.related {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-6);
+  margin-top: var(--space-12);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--border-color);
+}
+
+.related-title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: var(--space-3);
+}
+
+.related-list {
+  list-style: none;
+  margin: 0 0 var(--space-3) 0;
+  padding: 0;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background: var(--surface-default);
+  overflow: hidden;
+}
+
+.related-list > li + li .related-link {
+  border-top: 1px solid var(--border-color);
+}
+
+.related-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--font-sm);
+  color: var(--text-primary);
+  transition: background-color 0.12s ease;
+}
+
+.related-link:hover {
+  background: var(--bg-surface-hover);
+  text-decoration: none;
+}
+
+.related-hint {
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-tertiary);
+}
+
+.related-more {
+  font-size: var(--font-xs);
+  color: var(--text-secondary);
+}
+
+/* ---------- 上一篇 / 下一篇 ---------- */
+.doc-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--border-color);
+}
+
+.doc-nav-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background: var(--surface-default);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.doc-nav-item:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+}
+
+.doc-nav-item.align-end {
+  text-align: right;
+  align-items: flex-end;
+}
+
+.doc-nav-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--text-tertiary);
+}
+
+.doc-nav-title {
+  font-size: var(--font-sm);
+  font-weight: 600;
+  color: var(--accent-primary);
+}
+
+.doc-nav-group {
+  font-size: var(--font-xs);
+  color: var(--text-tertiary);
+}
+
+/* ---------- 角色表格 ---------- */
+.role-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-sm);
+  min-width: 560px;
+}
+
+.role-table th {
+  text-align: left;
+  padding: var(--space-2) var(--space-3);
+  background: var(--surface-subtle);
+  border: 1px solid var(--border-color);
+  font-family: var(--font-mono);
+  font-size: var(--font-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.role-table td {
+  padding: var(--space-3);
+  border: 1px solid var(--border-color);
+  vertical-align: top;
+}
+
+.role-table .role-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.role-table .role-desc {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.role-table tr {
+  scroll-margin-top: calc(var(--topbar-height) + var(--space-8));
+}
+
+.role-table tr.highlight td {
+  background: var(--tint-primary);
+}
+
+/* ---------- 表單清單 ---------- */
+.form-list {
+  list-style: none;
+  margin: var(--space-2) 0 0 0;
+  padding: 0;
+}
+
+.form-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.form-item:last-child {
+  border-bottom: none;
+}
+
+.form-item-info {
+  min-width: 0;
+}
+
+.form-item-name {
+  display: block;
+  font-size: var(--font-sm);
+  color: var(--text-primary);
+}
+
+.form-item-usage {
+  display: block;
+  font-size: var(--font-xs);
+  color: var(--text-tertiary);
+  line-height: 1.6;
+}
+
+@media (max-width: 860px) {
+  .doc-nav {
+    grid-template-columns: 1fr;
+  }
+}
