@@ -43,20 +43,27 @@ const Search = () => {
   const inputRef = useRef(null);
   const modalRef = useRef(null);
 
+  const [isMac, setIsMac] = useState(false);
+
   const results = query.trim() === '' ? [] : fuse.search(query).slice(0, 8);
 
   useEffect(() => {
-    const handleKeyDown = (e) => {
-      if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+    setIsMac(typeof navigator !== 'undefined' && /Mac|iPod|iPhone|iPad/.test(navigator.platform || navigator.userAgent));
+  }, []);
+
+  useEffect(() => {
+    const handleGlobalKeyDown = (e) => {
+      const isK = e.code === 'KeyK' || e.key?.toLowerCase() === 'k';
+      if ((e.ctrlKey || e.metaKey) && isK) {
         e.preventDefault();
-        setIsOpen(true);
+        setIsOpen((prev) => !prev);
       }
       if (e.key === 'Escape') {
         setIsOpen(false);
       }
     };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    window.addEventListener('keydown', handleGlobalKeyDown);
+    return () => window.removeEventListener('keydown', handleGlobalKeyDown);
   }, []);
 
   useEffect(() => {
@@ -95,7 +102,7 @@ const Search = () => {
           <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
         </svg>
         <span style={{ color: 'var(--text-tertiary)', fontSize: 'var(--font-sm)' }}>搜尋流程、心法或表單...</span>
-        <kbd className="search-kbd">Ctrl K</kbd>
+        <kbd className="search-kbd">{isMac ? '⌘ K' : 'Ctrl K'}</kbd>
       </div>
 
       {isOpen && (
