@@ -19,7 +19,7 @@ const Layout = () => {
 
   return (
     <div className="app-shell">
-      <Sidebar open={sidebarOpen} />
+      <Sidebar open={sidebarOpen} onNavigate={() => setSidebarOpen(false)} />
       {sidebarOpen && (
         <div
           className="sidebar-backdrop"

@@ -1,10 +1,10 @@
 import { Link, NavLink } from 'react-router-dom';
 import { NAV_GROUPS } from '../../data/registry';
 
-const Sidebar = ({ open = false }) => {
+const Sidebar = ({ open = false, onNavigate }) => {
   return (
     <aside className={`sidebar ${open ? 'open' : ''}`}>
-      <Link to="/" className="sidebar-brand">
+      <Link to="/" className="sidebar-brand" onClick={onNavigate}>
         <span className="brand-mark" aria-hidden="true">PSR</span>
         <span className="brand-text">
           <span className="brand-title">新人行政教學</span>
@@ -19,6 +19,7 @@ const Sidebar = ({ open = false }) => {
               <NavLink
                 to={`/category/${group.slug}`}
                 className={({ isActive }) => `nav-title nav-title-link ${isActive ? 'active' : ''}`}
+                onClick={onNavigate}
               >
                 <span className="nav-title-index">{String(index + 1).padStart(2, '0')}</span>
                 <span>{group.title}</span>
@@ -36,6 +37,7 @@ const Sidebar = ({ open = false }) => {
                     to={item.path}
                     end={item.path === '/'}
                     className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
+                    onClick={onNavigate}
                   >
                     {item.title}
                   </NavLink>
