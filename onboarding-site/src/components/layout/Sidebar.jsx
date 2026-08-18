@@ -15,10 +15,20 @@ const Sidebar = ({ open = false }) => {
       <nav className="sidebar-nav" aria-label="主導覽">
         {NAV_GROUPS.map((group, index) => (
           <div className="nav-group" key={group.title}>
-            <div className="nav-title">
-              <span className="nav-title-index">{String(index + 1).padStart(2, '0')}</span>
-              <span>{group.title}</span>
-            </div>
+            {group.slug ? (
+              <NavLink
+                to={`/category/${group.slug}`}
+                className={({ isActive }) => `nav-title nav-title-link ${isActive ? 'active' : ''}`}
+              >
+                <span className="nav-title-index">{String(index + 1).padStart(2, '0')}</span>
+                <span>{group.title}</span>
+              </NavLink>
+            ) : (
+              <div className="nav-title">
+                <span className="nav-title-index">{String(index + 1).padStart(2, '0')}</span>
+                <span>{group.title}</span>
+              </div>
+            )}
             <ul className="nav-list">
               {group.items.map((item) => (
                 <li key={item.id}>

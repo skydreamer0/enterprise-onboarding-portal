@@ -3,22 +3,23 @@ import { getNavContext } from '../../utils/nav';
 
 const Breadcrumbs = () => {
   const { pathname } = useLocation();
-  const { groupTitle, title } = getNavContext(pathname);
+  const { groupTitle, groupSlug, title } = getNavContext(pathname);
 
   const isHome = pathname === '/' || pathname === '';
+  const separator = <span className="breadcrumb-sep" aria-hidden="true">/</span>;
 
   return (
     <nav className="breadcrumbs" aria-label="麵包屑導覽">
       <Link to="/">首頁</Link>
       {!isHome && groupTitle && (
         <>
-          <span className="breadcrumb-sep" aria-hidden="true">/</span>
-          <span>{groupTitle}</span>
+          {separator}
+          {groupSlug ? <Link to={`/category/${groupSlug}`}>{groupTitle}</Link> : <span>{groupTitle}</span>}
         </>
       )}
       {!isHome && (
         <>
-          <span className="breadcrumb-sep" aria-hidden="true">/</span>
+          {separator}
           <span className="breadcrumb-current">{title || '內容'}</span>
         </>
       )}

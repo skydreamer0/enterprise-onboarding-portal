@@ -60,7 +60,12 @@ const Home = () => {
         <div className="grid-cards">
           {CONTENT_GROUPS.map((group) => (
             <div className="card index-card" key={group.title}>
-              <h3>{group.title}</h3>
+              <h3>
+                <Link to={`/category/${group.slug}`} className="index-card-link">
+                  {group.title}
+                  <span aria-hidden="true"> →</span>
+                </Link>
+              </h3>
               <ul className="index-list">
                 {group.items.map((item) => (
                   <li key={item.id}>

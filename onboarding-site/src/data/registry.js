@@ -19,6 +19,8 @@ export const NAV_GROUPS = [
   },
   {
     title: '行政費用與單據',
+    slug: 'admin-expense',
+    description: '行銷與營業費用的申請、折讓單與報核表的核銷，以及紙本正本的遞送規範。',
     items: [
       { id: '1', title: '行銷審會流程', path: '/process/1' },
       { id: '2', title: '營業費審會流程', path: '/process/2' },
@@ -27,6 +29,8 @@ export const NAV_GROUPS = [
   },
   {
     title: '業務銷售與出貨',
+    slug: 'sales-shipping',
+    description: '從報價單申請、系統建價，到控貨品項的評估出貨與後續退換貨處理。',
     items: [
       { id: '3', title: '報價單與特惠價格卡', path: '/process/3' },
       { id: '6', title: '控貨品項出貨', path: '/process/6' },
@@ -35,6 +39,8 @@ export const NAV_GROUPS = [
   },
   {
     title: '日常業務規劃',
+    slug: 'daily-planning',
+    description: '拜訪客戶前的準備計畫，以及每週、每月固定要繳交的規劃與費用申報。',
     items: [
       { id: '7', title: 'Pre-Call Plan', path: '/process/7' },
       { id: '8', title: 'EXPENSE', path: '/process/8' },
@@ -44,6 +50,8 @@ export const NAV_GROUPS = [
   },
   {
     title: '業務技巧與心法',
+    slug: 'sales-skills',
+    description: '辦活動訣竅、目標設定、對話引導與客戶經營的實務方法。',
     items: [
       { id: 's1', title: '活動準備', path: '/skills/1' },
       { id: 's2', title: 'SMART 目標設定', path: '/skills/2' },
@@ -93,7 +101,32 @@ export const ROLES_BY_ID = Object.fromEntries(ROLE_DATA.map((role) => [role.id, 
 export const DOC_SEQUENCE = NAV_GROUPS.filter((group) => group.items.every((item) => item.path.includes('/process/') || item.path.includes('/skills/')))
   .flatMap((group) => group.items.map((item) => ({ ...item, groupTitle: group.title })));
 
-/** 內容分類（首頁主題索引與側欄共用同一份資料）。 */
-export const CONTENT_GROUPS = NAV_GROUPS.filter((group) =>
-  group.items.every((item) => item.path.includes('/process/') || item.path.includes('/skills/'))
-);
+/** 內容分類（首頁主題索引、側欄與分類總覽頁共用同一份資料）。 */
+export const CONTENT_GROUPS = NAV_GROUPS.filter((group) => Boolean(group.slug));
+
+export const CATEGORY_BY_SLUG = Object.fromEntries(CONTENT_GROUPS.map((group) => [group.slug, group]));
+
+/** 取得單一文件的 metadata（流程或心法皆可）。 */
+export const getDocMeta = (path) => {
+  const match = path.match(/\/(process|skills)\/(\d+)/);
+  if (!match) return null;
+  const source = match[1] === 'process' ? PROCESS_DATA : SKILL_DATA;
+  return source[match[2]] || null;
+};
+
+/**
+ * 彙整一個分類底下所有文件會用到的表單與窗口（去重，維持文件出現順序）。
+ */
+export const getCategoryAssets = (slug) => {
+  const group = CATEGORY_BY_SLUG[slug];
+  if (!group) return { forms: [], roles: [] };
+
+  const forms = [];
+  const roles = [];
+  group.items.forEach((item) => {
+    const meta = getDocMeta(item.path);
+    (meta?.forms || []).forEach((id) => { if (!forms.includes(id)) forms.push(id); });
+    (meta?.roles || []).forEach((id) => { if (!roles.includes(id)) roles.push(id); });
+  });
+  return { forms, roles };
+};

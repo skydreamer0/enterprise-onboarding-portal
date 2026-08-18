@@ -4,7 +4,7 @@ import { FORMS_BY_ID, ROLES_BY_ID } from '../../data/registry-links';
 /**
  * 文件末尾的關聯資訊：本篇會用到的表單，以及需要對接的窗口。
  */
-const RelatedLinks = ({ forms = [], roles = [] }) => {
+const RelatedLinks = ({ forms = [], roles = [], scope = '本篇' }) => {
   const formItems = forms.map((id) => FORMS_BY_ID[id]).filter(Boolean);
   const roleItems = roles.map((id) => ROLES_BY_ID[id]).filter(Boolean);
 
@@ -14,7 +14,7 @@ const RelatedLinks = ({ forms = [], roles = [] }) => {
     <section className="related">
       {formItems.length > 0 && (
         <div className="related-block">
-          <h2 className="related-title">本篇會用到的表單</h2>
+          <h2 className="related-title">{scope}會用到的表單</h2>
           <ul className="related-list">
             {formItems.map((form) => (
               <li key={form.id}>

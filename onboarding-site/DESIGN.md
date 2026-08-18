@@ -59,11 +59,22 @@
 ## 5. 資料來源與連結關係 (Single Source of Truth)
 `src/data/registry.js` 是導覽與關聯的唯一來源，`src/data/forms.js` 是下載連結的唯一來源；頁面一律由這兩份資料衍生，不得各自寫死清單。
 
-*   `NAV_GROUPS`：側欄導覽結構。首頁「主題索引」與麵包屑分類皆由它衍生（`CONTENT_GROUPS`、`DOC_SEQUENCE`）。
+*   `NAV_GROUPS`：側欄導覽結構。首頁「主題索引」、分類總覽頁與麵包屑分類皆由它衍生（`CONTENT_GROUPS`、`CATEGORY_BY_SLUG`、`DOC_SEQUENCE`）。內容分類需帶 `slug` 與 `description`，`slug` 即分類頁網址 `/category/:slug`。
 *   `PROCESS_DATA` / `SKILL_DATA`：每篇文件除 title / subtitle 外，另有 `forms`（表單 id）與 `roles`（角色 id），驅動文末的「本篇會用到的表單」「需要對接的窗口」。
 *   `ROLE_DATA`：角色清單，`id` 同時是 `/roles` 頁的錨點（`/roles#role-anita`）。
 *   `FORMS_DATA`：每份表單有 `id`，供 `FORMS_BY_ID` 反查；表單庫再反向推導「用於：哪些文件」。
+*   `getCategoryAssets(slug)`：彙整一個分類底下所有文件的表單與窗口（去重），供分類總覽頁使用。
 *   `src/data/registry-links.js`：關聯查表的集中出口，避免 registry 與 forms 互相 import 造成循環相依。
+
+### 頁面層級
+```
+/                     首頁：快速上手 + 主題索引 + 其他資源
+/category/:slug       分類總覽：該分類全部文件 + 全部相關表單 + 對接窗口
+/process/:id          流程文件：內容 + 相關表單／窗口 + 上下篇
+/skills/:id           心法文件：同上
+/forms                表單下載庫（每份標示用於哪些文件）
+/roles                角色與聯絡人（支援 #role-xxx 錨點）
+```
 
 新增一篇文件時，只需在 `registry.js` 補一筆（導覽 + metadata + 關聯 id）並在 `docs/index.js` 註冊，首頁索引、麵包屑、上下篇導覽、表單反向連結會自動同步。
 

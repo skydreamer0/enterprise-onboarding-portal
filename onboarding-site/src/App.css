@@ -965,3 +965,106 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ---------- 側欄：可點的分類標題 ---------- */
+.nav-title-link {
+  border-radius: var(--radius-sm);
+  padding: 4px var(--space-3);
+  margin-bottom: var(--space-1);
+  transition: background-color 0.12s ease, color 0.12s ease;
+}
+
+.nav-title-link:hover {
+  background: var(--bg-surface-hover);
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.nav-title-link.active {
+  background: var(--surface-default);
+  color: var(--accent-primary);
+  box-shadow: inset 0 0 0 1px var(--border-color);
+}
+
+.nav-title-link.active .nav-title-index {
+  color: var(--accent-primary);
+}
+
+/* ---------- 首頁分類卡片標題連結 ---------- */
+.index-card-link {
+  color: var(--text-primary);
+}
+
+.index-card-link:hover {
+  color: var(--accent-primary);
+  text-decoration: none;
+}
+
+/* ---------- 分類頁：文件索引 ---------- */
+.doc-index {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  background: var(--surface-default);
+  overflow: hidden;
+}
+
+.doc-index > li + li .doc-index-item {
+  border-top: 1px solid var(--border-color);
+}
+
+.doc-index-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-5);
+  color: inherit;
+  transition: background-color 0.15s ease;
+}
+
+.doc-index-item:hover {
+  background: var(--bg-surface-hover);
+  text-decoration: none;
+}
+
+.doc-index-num {
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: var(--font-sm);
+  color: var(--accent-secondary);
+  line-height: 1.7;
+}
+
+.doc-index-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.doc-index-title {
+  display: block;
+  font-size: var(--font-base);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.doc-index-desc {
+  display: block;
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.doc-index-meta {
+  display: inline-block;
+  margin-top: var(--space-1);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--text-tertiary);
+}
+
+.doc-index-item .step-arrow {
+  line-height: 1.7;
+}
