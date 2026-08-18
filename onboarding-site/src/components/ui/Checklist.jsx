@@ -26,96 +26,110 @@ const Checklist = ({ id, title, items = [] }) => {
   }, [checkedItems, id]);
 
   const handleToggle = (index) => {
-    setCheckedItems(prev => ({
-      ...prev,
-      [index]: !prev[index]
-    }));
+    setCheckedItems((prev) => ({ ...prev, [index]: !prev[index] }));
   };
 
-  const progress = items.length > 0 
-    ? Math.round((Object.values(checkedItems).filter(Boolean).length / items.length) * 100) 
-    : 0;
+  const doneCount = Object.values(checkedItems).filter(Boolean).length;
+  const progress = items.length > 0 ? Math.round((doneCount / items.length) * 100) : 0;
 
   return (
-    <div className="checklist-card" style={{
-      background: 'var(--surface-card)',
-      border: '1px solid var(--glass-border)',
-      borderRadius: 'var(--radius-xl)',
-      padding: 'var(--space-6)',
-      margin: 'var(--space-6) 0',
-      backdropFilter: 'blur(var(--glass-blur))',
-      position: 'relative',
-      overflow: 'hidden'
-    }}>
-      {/* Progress bar at the top */}
-      <div style={{
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        height: '3px',
-        backgroundColor: 'var(--accent-primary)',
-        width: `${progress}%`,
-        transition: 'width 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-        boxShadow: '0 0 10px var(--accent-primary)'
-      }} />
-
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 'var(--space-4)' }}>
-        {title && <h4 style={{ margin: 0, fontSize: 'var(--font-lg)', color: 'var(--text-primary)' }}>{title}</h4>}
-        <span style={{ fontSize: 'var(--font-xs)', color: 'var(--text-tertiary)', fontWeight: 600 }}>
-          {progress}% 完成
+    <section
+      className="checklist-card"
+      style={{
+        background: 'var(--surface-default)',
+        border: '1px solid var(--border-color)',
+        borderRadius: 'var(--radius-lg)',
+        margin: 'var(--space-6) 0',
+        overflow: 'hidden',
+      }}
+    >
+      <header
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          gap: 'var(--space-4)',
+          padding: 'var(--space-3) var(--space-5)',
+          background: 'var(--surface-subtle)',
+          borderBottom: '1px solid var(--border-color)',
+        }}
+      >
+        {title && (
+          <h4 style={{ margin: 0, fontSize: 'var(--font-sm)', fontWeight: 600, color: 'var(--text-primary)' }}>
+            {title}
+          </h4>
+        )}
+        <span
+          style={{
+            fontFamily: 'var(--font-mono)',
+            fontSize: '11px',
+            color: 'var(--text-tertiary)',
+            whiteSpace: 'nowrap',
+          }}
+        >
+          {doneCount} / {items.length} 完成
         </span>
+      </header>
+
+      <div style={{ height: '2px', background: 'var(--border-color)' }}>
+        <div
+          style={{
+            height: '100%',
+            width: `${progress}%`,
+            background: 'var(--accent-primary)',
+            transition: 'width 0.3s ease',
+          }}
+        />
       </div>
 
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-3)' }}>
+      <div style={{ display: 'flex', flexDirection: 'column' }}>
         {items.map((item, index) => (
-          <label 
-            key={index} 
-            style={{ 
-              display: 'flex', 
-              alignItems: 'flex-start', 
-              gap: 'var(--space-3)', 
+          <label
+            key={index}
+            style={{
+              display: 'flex',
+              alignItems: 'flex-start',
+              gap: 'var(--space-3)',
               cursor: 'pointer',
-              padding: 'var(--space-2) var(--space-3)',
-              borderRadius: 'var(--radius-md)',
-              backgroundColor: checkedItems[index] ? 'rgba(255, 255, 255, 0.02)' : 'transparent',
-              transition: 'all 0.2s ease',
-              border: '1px solid transparent',
-              borderColor: checkedItems[index] ? 'transparent' : 'transparent'
+              padding: 'var(--space-3) var(--space-5)',
+              borderBottom: index === items.length - 1 ? 'none' : '1px solid var(--border-color)',
+              transition: 'background-color 0.15s ease',
+              backgroundColor: 'transparent',
             }}
             onMouseEnter={(e) => {
-              if (!checkedItems[index]) e.currentTarget.style.backgroundColor = 'var(--bg-surface-hover)';
+              e.currentTarget.style.backgroundColor = 'var(--bg-surface-hover)';
             }}
             onMouseLeave={(e) => {
-              if (!checkedItems[index]) e.currentTarget.style.backgroundColor = 'transparent';
+              e.currentTarget.style.backgroundColor = 'transparent';
             }}
           >
-            <div style={{ display: 'flex', alignItems: 'center', height: '24px' }}>
-              <input 
-                type="checkbox" 
-                checked={!!checkedItems[index]} 
-                onChange={() => handleToggle(index)}
-                style={{
-                  width: '18px',
-                  height: '18px',
-                  accentColor: 'var(--accent-primary)',
-                  cursor: 'pointer',
-                  margin: 0
-                }}
-              />
-            </div>
-            <span style={{ 
-              fontSize: 'var(--font-sm)',
-              color: checkedItems[index] ? 'var(--text-tertiary)' : 'var(--text-secondary)',
-              textDecoration: checkedItems[index] ? 'line-through' : 'none',
-              lineHeight: '24px',
-              transition: 'all 0.2s ease'
-            }}>
+            <input
+              type="checkbox"
+              checked={!!checkedItems[index]}
+              onChange={() => handleToggle(index)}
+              style={{
+                width: '15px',
+                height: '15px',
+                marginTop: '5px',
+                accentColor: 'var(--accent-primary)',
+                cursor: 'pointer',
+                flex: 'none',
+              }}
+            />
+            <span
+              style={{
+                fontSize: 'var(--font-sm)',
+                lineHeight: 1.7,
+                color: checkedItems[index] ? 'var(--text-tertiary)' : 'var(--text-secondary)',
+                textDecoration: checkedItems[index] ? 'line-through' : 'none',
+              }}
+            >
               {item}
             </span>
           </label>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

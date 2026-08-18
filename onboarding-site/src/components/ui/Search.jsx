@@ -101,7 +101,7 @@ const Search = () => {
           <circle cx="11" cy="11" r="8"></circle>
           <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
         </svg>
-        <span style={{ color: 'var(--text-tertiary)', fontSize: 'var(--font-sm)' }}>搜尋流程、心法或表單...</span>
+        <span className="search-trigger-label">搜尋流程、心法或表單…</span>
         <kbd className="search-kbd">{isMac ? '⌘ K' : 'Ctrl K'}</kbd>
       </div>
 
@@ -109,7 +109,7 @@ const Search = () => {
         <div className="search-overlay" onClick={() => setIsOpen(false)}>
           <div className="search-modal" onClick={(e) => e.stopPropagation()} ref={modalRef}>
             <div className="search-input-wrapper">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--accent-primary)' }}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--accent-primary)', flex: 'none' }}>
                 <circle cx="11" cy="11" r="8"></circle>
                 <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
               </svg>
@@ -170,70 +170,73 @@ const Search = () => {
           display: flex;
           align-items: center;
           gap: var(--space-3);
-          background: var(--surface-subtle);
+          height: 32px;
+          background: var(--surface-default);
           border: 1px solid var(--border-color);
           border-radius: var(--radius-md);
-          padding: var(--space-2) var(--space-4);
+          padding: 0 var(--space-3);
           cursor: pointer;
-          transition: all 0.2s ease;
-          min-width: 300px;
+          transition: border-color 0.15s ease, background-color 0.15s ease;
+          min-width: 260px;
+          color: var(--text-tertiary);
         }
 
         .search-trigger:hover {
-          border-color: var(--accent-primary);
+          border-color: var(--border-strong);
           background: var(--bg-surface-hover);
+        }
+
+        .search-trigger-label {
+          font-size: var(--font-sm);
+          color: var(--text-tertiary);
         }
 
         .search-kbd {
           margin-left: auto;
-          background: var(--bg-base);
+          background: var(--surface-subtle);
           border: 1px solid var(--border-color);
           border-radius: var(--radius-sm);
-          padding: 2px 6px;
+          padding: 1px 5px;
+          font-family: var(--font-mono);
           font-size: 10px;
           color: var(--text-tertiary);
-          font-family: inherit;
         }
 
         .search-overlay {
           position: fixed;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background: rgba(0, 0, 0, 0.6);
-          backdrop-filter: blur(4px);
+          inset: 0;
+          background: rgba(26, 28, 30, 0.28);
           z-index: 100;
           display: flex;
           justify-content: center;
-          padding-top: 15vh;
+          padding: 14vh var(--space-4) var(--space-4);
         }
 
         .search-modal {
           background: var(--surface-default);
-          border: 1px solid var(--glass-border);
-          border-radius: var(--radius-xl);
+          border: 1px solid var(--border-strong);
+          border-radius: var(--radius-lg);
           width: 100%;
-          max-width: 600px;
+          max-width: 560px;
           height: fit-content;
-          max-height: 70vh;
+          max-height: 68vh;
           display: flex;
           flex-direction: column;
-          box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), var(--shadow-glow);
+          box-shadow: var(--shadow-xl);
           overflow: hidden;
-          animation: modalSlideIn 0.2s ease-out;
+          animation: modalSlideIn 0.16s ease-out;
         }
 
         @keyframes modalSlideIn {
-          from { opacity: 0; transform: translateY(-20px) scale(0.95); }
-          to { opacity: 1; transform: translateY(0) scale(1); }
+          from { opacity: 0; transform: translateY(-8px); }
+          to { opacity: 1; transform: translateY(0); }
         }
 
         .search-input-wrapper {
           display: flex;
           align-items: center;
-          gap: var(--space-4);
-          padding: var(--space-5) var(--space-6);
+          gap: var(--space-3);
+          padding: var(--space-4) var(--space-5);
           border-bottom: 1px solid var(--border-color);
         }
 
@@ -241,7 +244,8 @@ const Search = () => {
           background: transparent;
           border: none;
           color: var(--text-primary);
-          font-size: var(--font-lg);
+          font-family: var(--font-sans);
+          font-size: var(--font-base);
           width: 100%;
           outline: none;
         }
@@ -255,60 +259,64 @@ const Search = () => {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          padding: var(--space-3) var(--space-4);
-          border-radius: var(--radius-lg);
+          padding: var(--space-2) var(--space-3);
+          border-radius: var(--radius-md);
           cursor: pointer;
-          transition: all 0.2s ease;
           gap: var(--space-4);
         }
 
         .search-result-item.active {
-          background: var(--bg-surface-hover);
-          box-shadow: inset 0 0 0 1px var(--accent-primary);
+          background: var(--surface-subtle);
+          box-shadow: inset 0 0 0 1px var(--border-color);
         }
 
         .search-result-info {
           display: flex;
           flex-direction: column;
-          gap: 2px;
           flex: 1;
+          min-width: 0;
         }
 
         .search-result-title {
           font-weight: 600;
+          font-size: var(--font-sm);
           color: var(--text-primary);
         }
 
         .search-result-subtitle {
           font-size: var(--font-xs);
-          color: var(--text-secondary);
+          color: var(--text-tertiary);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
         }
 
         .search-result-type {
+          font-family: var(--font-mono);
           font-size: 10px;
-          font-weight: 700;
-          padding: 2px 8px;
-          border-radius: var(--radius-full);
-          background: var(--border-color);
-          color: var(--text-tertiary);
-          text-transform: uppercase;
+          padding: 1px 6px;
+          border-radius: var(--radius-sm);
+          background: var(--tint-neutral);
+          color: var(--text-secondary);
+          flex: none;
         }
 
         .search-result-item.active .search-result-type {
           background: var(--accent-primary);
-          color: white;
+          color: var(--text-on-accent);
         }
 
         .search-no-results, .search-placeholder {
           padding: var(--space-10);
           text-align: center;
+          font-size: var(--font-sm);
           color: var(--text-tertiary);
         }
 
         .search-footer {
           display: flex;
-          gap: var(--space-6);
-          padding: var(--space-4) var(--space-6);
+          gap: var(--space-5);
+          padding: var(--space-3) var(--space-5);
           background: var(--surface-subtle);
           border-top: 1px solid var(--border-color);
           font-size: 11px;
@@ -322,11 +330,20 @@ const Search = () => {
         }
 
         .search-footer kbd {
-          background: var(--bg-base);
+          background: var(--surface-default);
           border: 1px solid var(--border-color);
           border-radius: var(--radius-sm);
           padding: 1px 5px;
-          font-family: inherit;
+          font-family: var(--font-mono);
+        }
+
+        @media (max-width: 1024px) {
+          .search-trigger {
+            min-width: 0;
+          }
+          .search-trigger-label {
+            display: none;
+          }
         }
       `}</style>
     </>

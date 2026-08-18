@@ -1,58 +1,71 @@
 # 🎨 Onboarding Site Design & Development Guide
 
-本文件定義了「新人行政教學入口網站」的設計系統、開發規範與架構原則，旨在確保 UI 的一致性並協助未來開發者（或 AI Agent）快速上手。
+本文件定義「新人行政教學入口網站」的設計系統、開發規範與架構原則，確保 UI 一致性並協助未來開發者（或 AI Agent）快速上手。
 
 ## 1. 核心哲學
-*   **Design-First**: 所有的介面應具備現代感，優先考慮 Dark Mode 與 Glassmorphism (磨砂玻璃) 效果。
-*   **Content-Driven**: 教學內容應以 **MDX** 撰寫，邏輯則留在 React 元件中。
-*   **Accessible & Efficient**: 資訊密度要適中，確保新人能快速找到重點。
+*   **Professional / Document-First**：企業內部文件風格。淺色紙感底、高可讀性、資訊密度優先，避免裝飾性特效（漸層光暈、磨砂玻璃、大幅度動畫）。
+*   **Content-Driven**：教學內容以 **MDX** 撰寫，邏輯留在 React 元件中。
+*   **Accessible & Efficient**：文字對比符合 WCAG AA，重點資訊可在一屏內掃讀。
 
 ## 2. 設計系統 (Design Tokens)
-所有的樣式應使用 `src/index.css` 中定義的變數。
+所有樣式一律使用 `src/index.css` 中的變數，禁止在元件內寫死色碼。
 
 ### 顏色 (Colors)
-*   `--bg-base`: `#000000` (純黑背景)
-*   `--accent-primary`: `#6366f1` (品牌主色 - Indigo)
-*   `--accent-success`: `#10b981` (翠綠色 - 流程完成)
-*   `--accent-warning`: `#f59e0b` (橘黃色 - 注意事項)
-*   `--accent-danger`: `#ef4444` (紅色 - 時效警示)
+*   `--bg-base`: `#f7f6f3`（暖紙白，全站底色）
+*   `--surface-default`: `#ffffff`（卡片／內容底）
+*   `--surface-subtle`: `#f2f0ea`（表頭、次要區塊）
+*   `--border-color`: `#e3dfd6`／`--border-strong`: `#d2ccc0`
+*   `--text-primary`: `#1a1c1e`｜`--text-secondary`: `#55595e`｜`--text-tertiary`: `#8b8e93`
+*   `--accent-primary`: `#0f4c5c`（深孔雀藍，品牌主色）
+*   `--accent-secondary`: `#8a5423`（銅棕，用於編號與 eyebrow 標籤）
+*   語義色：`--accent-success` `#146c43`、`--accent-warning` `#97600a`、`--accent-danger` `#b42318`
+*   襯底：`--tint-primary` / `--tint-success` / `--tint-warning` / `--tint-danger` / `--tint-neutral`
 
-### 間距 (Spacing)
-採用 **8px Grid System**。
-*   `--space-1`: 4px
-*   `--space-2`: 8px
-*   `--space-4`: 16px
-*   `--space-8`: 32px
+### 字體 (Typography)
+*   `--font-serif`：`Newsreader` + `Noto Serif TC` — 僅用於 `h1`／`h2`，建立文件感。
+*   `--font-sans`：`IBM Plex Sans` + `Noto Sans TC` — 內文與 UI。
+*   `--font-mono`：`IBM Plex Mono` — 標籤、編號、麵包屑輔助資訊、目錄標題。
+*   字級較舊版收斂一級（`--font-base` = 15px），以提高資訊密度。
 
-### 視覺效果 (Glassmorphism)
-*   **Blur**: `backdrop-filter: blur(20px)`
-*   **Border**: `1px solid rgba(255, 255, 255, 0.08)`
-*   **Background**: `rgba(18, 18, 18, 0.6)`
+### 間距與圓角
+*   間距採 **8px Grid**（`--space-1` ~ `--space-20`）。
+*   圓角收斂：`--radius-sm` 3px、`--radius-md` 5px、`--radius-lg` 8px。
+*   陰影僅用於浮層（`--shadow-md` 以上），一般卡片以 1px 邊框界定。
 
-## 3. 組件規範
-### Atomic Components
-*   **Card**: 用於內容區塊，預設帶有懸浮效果。
-*   **Badge**: 用於標註標籤、步驟編號或狀態。
-*   **Button**: 僅使用 `btn-primary` 等語義化類別或 `Button.jsx` 元件。
+## 3. 版面結構 (Layout)
+```
+.app-shell
+├── .sidebar          固定左側 268px（≤1024px 縮為 240px；≤860px 改為抽屜式）
+└── .main-column
+    ├── .topbar       黏性頂欄：麵包屑 + 搜尋 + 表單下載
+    └── .page-grid    內容欄（最大 780px）+ 右側 .toc（≥1240px 顯示）
+```
+*   **Breadcrumbs**（`components/layout/Breadcrumbs.jsx`）依 `utils/nav.js` 由 `NAV_GROUPS` 反查所屬分類。
+*   **TableOfContents**（`components/layout/TableOfContents.jsx`）掃描 `.content-body` 內的 `h2/h3`，自動補 id 並提供捲動高亮；少於 2 個標題時不顯示。
+*   **PageHeader**（`components/ui/PageHeader.jsx`）統一頁首：eyebrow（分類）→ 標題 → 導言 → meta 資訊列。
+*   文件內容需包在 `<div className="content-body prose">` 內，`.prose` 負責 MDX 的排版（標題分隔線、清單、表格、引言、行內程式碼）。
 
-### Molecule Components
-*   **StepProgress**: 用於呈現行政流程的階段性。
-*   **Checklist**: 用於呈現操作前的檢核項目，狀態會自動儲存於 LocalStorage。
-*   **Search**: 使用 `Fuse.js` 實作的模糊搜尋，支援快捷鍵 `Ctrl + K`。
+## 4. 組件規範
+### Atomic
+*   **Card**：1px 邊框 + 白底；帶 `onClick` 時自動加上 `.linked`（右上角箭頭指示）。
+*   **Badge**：等寬字體標籤，`default / primary / success / warning / danger` 五種語義。
+*   **Button**：`primary`（實心主色）、`secondary`（白底描邊）、`subtle`（透明描邊）。
 
-## 4. 內容管理 (MDX)
-*   所有的流程文件存放在 `src/docs/processes/`。
-*   所有的心法文件存放在 `src/docs/skills/`。
-*   新增文件後，需在 `src/docs/index.js` 進行註冊。
+### Molecule
+*   **StepProgress**：流程階段，圓點 + 連接線，已完成階段填入主色。
+*   **Checklist**：表頭顯示完成計數與進度線，狀態存於 LocalStorage。
+*   **Search**：`Fuse.js` 模糊搜尋，快捷鍵 `Ctrl / ⌘ + K`。
 
-## 5. 代碼規範 (Engineering)
-*   **React 19**: 使用最新的 React 特性，避免不必要的 Class Components。
-*   **Naming**: 
-    *   檔案名: `PascalCase.jsx` 或 `kebab-case.mdx`。
-    *   變數名: `camelCase`。
-    *   CSS 類名: `kebab-case`。
-*   **Conventional Commits**: 每次提交應描述異動類型，例如 `feat:`, `fix:`, `refactor:`, `docs:`。
+## 5. 內容管理 (MDX)
+*   流程文件：`src/docs/processes/`；心法文件：`src/docs/skills/`；新增後於 `src/docs/index.js` 註冊，並在 `src/data/registry.js` 補上 metadata 與導覽項目。
+*   MDX 內請使用 token（如 `var(--accent-warning)`、`var(--tint-danger)`），勿寫死亮色系色碼——淺色底會造成對比不足。
+*   Card 內若要放段落文字，請使用 `<div>` 而非 `<p>`，避免 MDX 產生巢狀 `<p>`。
+
+## 6. 代碼規範 (Engineering)
+*   **React 19**：使用最新特性，避免不必要的 Class Components。
+*   **Naming**：檔案 `PascalCase.jsx` / `kebab-case.mdx`；變數 `camelCase`；CSS 類名 `kebab-case`。
+*   **Conventional Commits**：`feat:`, `fix:`, `refactor:`, `docs:`, `style:`。
 
 ---
 
-*Last Updated: 2026-05-16*
+*Last Updated: 2026-08-18*

@@ -1,60 +1,29 @@
+const VARIANTS = {
+  default: { backgroundColor: 'var(--tint-neutral)', color: 'var(--text-secondary)', borderColor: 'transparent' },
+  primary: { backgroundColor: 'var(--tint-primary)', color: 'var(--accent-primary)', borderColor: 'rgba(15, 76, 92, 0.18)' },
+  success: { backgroundColor: 'var(--tint-success)', color: 'var(--accent-success)', borderColor: 'rgba(20, 108, 67, 0.2)' },
+  warning: { backgroundColor: 'var(--tint-warning)', color: 'var(--accent-warning)', borderColor: 'rgba(151, 96, 10, 0.22)' },
+  danger: { backgroundColor: 'var(--tint-danger)', color: 'var(--accent-danger)', borderColor: 'rgba(180, 35, 24, 0.2)' },
+};
 
-
-const Badge = ({ 
-  children, 
-  variant = 'default', 
-  className = '', 
-  style = {},
-  ...props 
-}) => {
+const Badge = ({ children, variant = 'default', className = '', style = {}, ...props }) => {
   const baseStyles = {
     display: 'inline-flex',
     alignItems: 'center',
+    fontFamily: 'var(--font-mono)',
     fontSize: '11px',
-    fontWeight: 600,
-    padding: '2px 10px',
-    borderRadius: 'var(--radius-full)',
-    textTransform: 'uppercase',
-    letterSpacing: '0.05em',
-  };
-
-  const variants = {
-    default: {
-      backgroundColor: 'var(--border-color)',
-      color: 'var(--text-secondary)',
-    },
-    warning: {
-      backgroundColor: 'rgba(245, 158, 11, 0.1)',
-      color: 'var(--accent-warning)',
-      border: '1px solid rgba(245, 158, 11, 0.2)',
-    },
-    success: {
-      backgroundColor: 'rgba(16, 185, 129, 0.1)',
-      color: 'var(--accent-success)',
-      border: '1px solid rgba(16, 185, 129, 0.2)',
-    },
-    danger: {
-      backgroundColor: 'rgba(239, 68, 68, 0.1)',
-      color: 'var(--accent-danger)',
-      border: '1px solid rgba(239, 68, 68, 0.2)',
-    },
-    primary: {
-      backgroundColor: 'rgba(99, 102, 241, 0.1)',
-      color: 'var(--accent-primary)',
-      border: '1px solid rgba(99, 102, 241, 0.2)',
-    }
-  };
-
-  const combinedStyles = {
-    ...baseStyles,
-    ...variants[variant],
-    ...style,
+    fontWeight: 500,
+    lineHeight: 1.6,
+    padding: '1px 8px',
+    borderRadius: 'var(--radius-sm)',
+    letterSpacing: '0.03em',
+    border: '1px solid transparent',
   };
 
   return (
-    <span 
+    <span
       className={`badge ${className}`}
-      style={combinedStyles}
+      style={{ ...baseStyles, ...(VARIANTS[variant] || VARIANTS.default), ...style }}
       {...props}
     >
       {children}

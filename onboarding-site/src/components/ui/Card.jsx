@@ -1,20 +1,10 @@
+const Card = ({ children, className = '', hoverable = true, style = {}, ...props }) => {
+  const isLinked = Boolean(props.onClick || props.href);
 
-
-const Card = ({ 
-  children, 
-  className = '', 
-  hoverable = true,
-  style = {},
-  ...props 
-}) => {
   return (
-    <div 
-      className={`card ${hoverable ? 'hoverable' : ''} ${className}`}
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        ...style
-      }}
+    <div
+      className={`card ${hoverable ? 'hoverable' : ''} ${isLinked ? 'linked' : ''} ${className}`}
+      style={{ display: 'flex', flexDirection: 'column', ...style }}
       {...props}
     >
       {children}

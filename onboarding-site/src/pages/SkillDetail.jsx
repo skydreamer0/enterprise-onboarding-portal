@@ -1,20 +1,30 @@
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import { SKILL_DATA } from '../data/registry';
 import { skills } from '../docs';
+import PageHeader from '../components/ui/PageHeader';
+import { getNavContext } from '../utils/nav';
 
 const SkillDetail = () => {
   const { id } = useParams();
+  const { pathname } = useLocation();
   const data = SKILL_DATA[id];
   const ContentComponent = skills[id];
+  const { groupTitle } = getNavContext(pathname);
 
-  if (!data) return <div>Skill not found</div>;
+  if (!data) return <p>找不到這份心法文件。</p>;
 
   return (
-    <div className="process-view">
-      <h1>{data.title}</h1>
-      <p style={{ color: 'var(--text-secondary)' }}>{data.subtitle}</p>
-      {ContentComponent ? <ContentComponent /> : <div>Skill content not found</div>}
-    </div>
+    <article>
+      <PageHeader
+        eyebrow={groupTitle || '業務心法'}
+        title={data.title}
+        lead={data.subtitle}
+        meta={[`文件編號 SKILL-${String(id).padStart(2, '0')}`]}
+      />
+      <div className="content-body prose">
+        {ContentComponent ? <ContentComponent /> : <p>此心法的內容尚未建立。</p>}
+      </div>
+    </article>
   );
 };
 
