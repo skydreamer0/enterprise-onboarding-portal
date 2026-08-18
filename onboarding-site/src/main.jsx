@@ -7,7 +7,7 @@ import './index.css'
 // 加上 basename 讓 GitHub Pages 能正確處理子路徑路由
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename="/enterprise-onboarding-portal">
+    <BrowserRouter basename="/work_newpsr">
       <App />
     </BrowserRouter>
   </StrictMode>,

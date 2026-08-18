@@ -8,5 +8,5 @@ export default defineConfig({
     {enforce: 'pre', ...mdx()},
     react()
   ],
-  base: '/enterprise-onboarding-portal/',
+  base: '/work_newpsr/',
 })
